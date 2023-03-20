@@ -1,8 +1,21 @@
-$bg: #f90;
-$bgbox: #8F0;
+$bg: rgb(235, 224, 208);
+$bgbox: rgb(195, 216, 171);
 
 body{
     background-color: $bg;
+}
+
+.l006_box{
+    background-color: $bgbox;
+    max-width: 1000px; min-height: 50vh;
+    margin: 0 auto;
+    &__svg{
+        fill:none;
+        stroke:red;
+        &:hover{
+            stroke-width:5;
+        }
+    }
 }
 
 .box {

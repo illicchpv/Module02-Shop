@@ -1,1 +1,1 @@
-body{background-color:#f90}.box{background-color:#8f0}.box__title{color:red;font-size:40px}.box__image{max-width:300px}.box2-images{display:flex;gap:20px}.box2-images img{height:100px}
+body{background-color:#ebe0d0}.l006_box{background-color:#c3d8ab;max-width:1000px;min-height:50vh;margin:0 auto}.l006_box__svg{fill:none;stroke:red}.l006_box__svg:hover{stroke-width:5}.box{background-color:#c3d8ab}.box__title{color:red;font-size:40px}.box__image{max-width:300px}.box2-images{display:flex;gap:20px}.box2-images img{height:100px}
