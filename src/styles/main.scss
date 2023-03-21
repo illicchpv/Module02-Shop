@@ -1,7 +1,14 @@
-$color1: red;
-
 $dark: #27300F;
 $button: RGBA(210, 106, 34, 1);
 $white: white;
 
 @import 'header';
+
+.logo {
+  display: block;
+  background-image: url(../images/logo.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 123px;
+  height: 32px;
+}

@@ -1,9 +1,6 @@
-// body{
-//   background-color: $color1;
-// }
-
 .main {
 }
+
 .header {
   max-width: 1440px;
   margin: 0 auto;
@@ -54,24 +51,4 @@
     top: 6px;
     right: 10px;
   }
-}
-.logo {
-  display: block;
-  background-image: url(../images/logo.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 123px;
-  height: 32px;
-}
-.header__nav {
-}
-.header__item {
-}
-.header__link {
-}
-.header__tel {
-}
-.header__cart {
-}
-.header__counter {
 }
