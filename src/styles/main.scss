@@ -1,42 +1,7 @@
-$bg: rgb(235, 224, 208);
-$bgbox: rgb(195, 216, 171);
+$color1: red;
 
-body{
-    background-color: $bg;
-}
+$dark: #27300F;
+$button: RGBA(210, 106, 34, 1);
+$white: white;
 
-.l006_box{
-    background-color: $bgbox;
-    max-width: 1000px; min-height: 50vh;
-    margin: 0 auto;
-    &__svg{
-        fill:none;
-        stroke:red;
-        &:hover{
-            stroke-width:5;
-        }
-    }
-}
-
-.box {
-    background-color: $bgbox;
-    &__title{
-        color: red;
-        font-size: 40px;
-    }
-    &__image{
-        max-width: 300px;
-    }
-}
-.box__title {
-}
-.box__image {
-}
-
-.box2-images {
-    display: flex;
-    gap: 20px;
-}
-.box2-images img{
-    height: 100px;
-}
+@import 'header';

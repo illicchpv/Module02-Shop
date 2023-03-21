@@ -1,0 +1,77 @@
+// body{
+//   background-color: $color1;
+// }
+
+.main {
+}
+.header {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__nav{
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+    gap:48px
+  }
+  &__link{
+    font-size: 16px;
+    color:$dark;
+    text-decoration: none;
+    &:hover{
+      color: $button;
+    }
+  }
+  &__tel{
+    font-size: 16px;
+    color:$dark;
+    text-decoration: none;
+    &:hover{
+      color: $button;
+    }
+  }
+  &__cart{
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $button;
+    background-image: url(../images/cart-white.svg);
+    background-size: 17px 15px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  &__counter{
+    font-size: 8px;
+    color: $white;
+    position: absolute;
+    top: 6px;
+    right: 10px;
+  }
+}
+.logo {
+  display: block;
+  background-image: url(../images/logo.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 123px;
+  height: 32px;
+}
+.header__nav {
+}
+.header__item {
+}
+.header__link {
+}
+.header__tel {
+}
+.header__cart {
+}
+.header__counter {
+}
