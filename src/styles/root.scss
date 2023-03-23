@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,700;1,700&family=Jost:wght@400;500&display=swap');
+
+$font-jost: 'Jost', sans-serif;
+$font-corm: 'Cormorant', serif;
+$font: $font-jost;
+
+$green: #27300F;
+$orange: #d26a22; //RGBA(210, 106, 34, 1);
+$white: white;
+
+html{
+  font-size: 10px;
+}
+body{
+  font-size: 1.6rem;
+  font-family: $font;
+}
+
+.logo {
+  display: block;
+  background-image: url(../images/logo.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 12.3rem;
+  height: 3.2rem;
+}
+
+@import 'main';

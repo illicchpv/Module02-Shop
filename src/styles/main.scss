@@ -1,28 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,700;1,700&family=Jost:wght@400;500&display=swap');
-
-$font-jost: 'Jost', sans-serif;
-$font-corm: 'Cormorant', serif;
-$font: $font-jost;
-
-$green: #27300F;
-$orange: #d26a22; //RGBA(210, 106, 34, 1);
-$white: white;
-
-html{
-  font-size: 10px;
-}
-body{
-  font-size: 1.6rem;
-  font-family: $font;
+.main {
 }
 
-.logo {
-  display: block;
-  background-image: url(../images/logo.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 12.3rem;
-  height: 3.2rem;
+.header {
+  margin: 0 auto;
+  margin-top: 4rem; // отступ сверху
+  max-width: 1440px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__nav{
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+    gap:4.8rem;
+  }
+  &__link{
+    color:$green;
+    text-decoration: none;
+    &:hover{
+      color: $orange;
+    }
+  }
+  &__tel{
+    font-weight: 500;
+    color:$green;
+    text-decoration: none;
+    &:hover{
+      color: $orange;
+    }
+  }
+  &__cart{
+    display: block;
+    width: 3.8rem;
+    height: 3.8rem;
+    border-radius: 50%;
+    background-color: $orange;
+    background-image: url(../images/cart-white.svg);
+    background-size: 1.7rem 1.5rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    border: 1px solid $orange;
+    &:hover{
+      border: 1px solid $green;
+      background-color: $green;
+    }
+  }
+  &__counter{
+    font-size: .8rem;
+    color: $white;
+    position: absolute;
+    right: 1rem;
+    top: .5rem;
+  }
 }
-
-@import 'header';

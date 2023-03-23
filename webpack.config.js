@@ -11,7 +11,7 @@ const devServer = (isDev) => !isDev ? {} : {
 };
 
 module.exports = ({ develop }) => ({
-    mode: develop ? "development" : "production",
+    mode: develop ? 'development' : 'production',
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -24,7 +24,7 @@ module.exports = ({ develop }) => ({
             template: './src/index.html'
         }),
         new MiniCssExtractPlugin({
-            filename: './styles/main.css'
+            filename: './styles/root.css'
         })
     ],
     module: {
@@ -51,5 +51,5 @@ module.exports = ({ develop }) => ({
             }
         ]
     },
-    ...devServer(develop),
+    ...devServer(develop)
 });
