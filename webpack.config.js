@@ -12,6 +12,7 @@ const devServer = (isDev) => !isDev ? {} : {
 
 module.exports = ({ develop }) => ({
     mode: develop ? 'development' : 'production',
+    devtool: 'source-map',
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -40,7 +41,7 @@ module.exports = ({ develop }) => ({
             {
                 test: /\.css$/i,
                 use: [
-                    MiniCssExtractPlugin.loader, 'css-loader'
+                    MiniCssExtractPlugin.loader, { loader: 'css-loader', options: { sourceMap: true } }
                 ]
             },
             {
