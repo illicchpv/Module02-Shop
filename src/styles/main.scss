@@ -9,7 +9,7 @@
 }
 
 .header {
-  margin: 0 auto;
+  margin: 0 auto 6rem;
   max-width: 1440px;
   padding: 4rem 15px 0 15px; // отступ сверху
   display: flex;
@@ -68,6 +68,8 @@
   background-position-x: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+  padding-bottom: 187px;
   // &__text{
   // }
   &__item{
@@ -77,6 +79,118 @@
   }
   &__link{
     margin-top: 6rem;
+  }
+  &__flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  &__cover{
+    flex-basis: 763px;
+    height: 763px;
+    border: 1px solid rgba($green,0.4);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  &__line{
+    width: 658px; 
+    height: 658px;
+    // box-shadow: 0 0 0 1px rgba($green,0.4), 0 0 0 53px white, 0 0 0 54px rgba($green,0.4);
+    border: 1px solid rgba($green,0.4);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__image{
+    width: 92%; 
+  }
+  &__btn{
+    border: none;
+    padding: 0;
+    position: absolute;
+    color: $green;
+    text-align: left;
+    &:hover{
+      // .main__btn{
+        &::before{
+          background-color: $orange;
+          box-shadow: 0 0 0 4px rgba($white, 1), 0 0 0 5px rgba($orange, 1);
+        }
+      // }
+    }
+    &::before{
+      content: '';
+      background-color: $green;
+      width: 11px; height: 11px;
+      box-shadow: 0 0 0 4px rgba($white, 1), 0 0 0 5px rgba($green, 1);
+      border-radius: 50%;
+      position: absolute;
+    }
+    &_1{
+      top: 96px;
+      left: 25px;
+      &::before{
+        top: 15px;
+        right:-24px;
+      }
+    }
+    &_2{
+      top: 139px;
+      right: 49px;
+      &::before{
+        top: 15px;
+        left: -20px;
+      }
+    }
+    &_3{
+      bottom: -36px;
+      right: 245px;
+      &::before{
+        top: -18px;
+        right: 32px;
+      }
+    }
+  }
+  &__food{
+    display: block;
+    color: rgba($green, 0.8);
+  }
+  &__cucumber {
+    position: absolute;
+    top: 0;
+    left: 37%;
+    width: 85px;    
+  }
+  &__avocado {
+    position: absolute;
+    top: 42px;
+    right: 0;
+    width: 194px;
+  }
+  &__pepper {
+    position: absolute;
+    top: 30%;
+    left: 47px;
+    width: 86px;
+  }  
+  &__beans {
+    position: absolute;
+    bottom: 14%;
+    left: 0;
+    width: 138px;
+  }
+  &__tomato{
+    position: absolute;
+    bottom: 9%;
+    right: 6%;
+    width: 110px;
   }
 }
 
