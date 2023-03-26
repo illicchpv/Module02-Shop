@@ -109,7 +109,9 @@
     align-items: center;
   }
   &__image{
-    width: 92%; 
+    width: 90%; 
+    box-shadow: 5px 15px 10px 0px rgba($green,0.50);
+    border-radius: 50%;
   }
   &__btn{
     border: none;
