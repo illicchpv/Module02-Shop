@@ -24,7 +24,7 @@ import Swiper, { Navigation, Pagination } from 'swiper';
 
 var swiper = new Swiper(".offerSwiper", {
   slidesPerView: 3,
-  spaceBetween: 30,
+  spaceBetween: 20,
   slidesPerGroup: 3,
   loop: true,
   loopFillGroupWithBlank: true,
