@@ -17,23 +17,108 @@
 }
 .swiper{
   overflow: initial;
-  &-wrapper{
-
-  }
   &-slide{
-    border: 1px solid red;
+    height: 521px;
+    box-sizing: border-box;
+    padding: 213px 0 40px 42px;
+    position: relative;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    &__title{
+      font-family: $font-corm;
+      font-weight: 700;
+      font-size: 3rem;
+      margin: 0;
+      max-width: 270px;
+      position: absolute;
+      bottom: 36px;
+    }
+    &__text{
+      display: none;
+      font-family: $font-jost;
+      font-size: 1.6rem;
+      font-weight: 400;
+      opacity: 0.70;
+      max-width: 270px;
+      margin-top: 25px;
+      line-height: 1.5;
+    }
+    &__link{
+      display: none;
+      margin-top: 26px;
+      margin-left: -4px;
+      text-decoration: none;
+      color: $green;
+      font-family: $font-jost;
+      font-size: 1.6rem;
+      font-weight: 500;
+      opacity: 0.8;
+      padding-left: 52px;
+      position: relative;
+      letter-spacing: .13rem;
+      text-transform: uppercase;
+    }
+    &__link::before{
+      content: '';
+      position: absolute;
+      left: 0; top: -6px;
+      width: 31px;
+      height: 31px;
+      background-image: url(../images/plus.svg);
+    }
+    &:hover{
+      .swiper-slide__title{
+        position: static;
+      }
+       .swiper-slide__text{
+        display: block;
+      }     .swiper-slide__link{
+        display: inline-block;
+      }
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      box-sizing: border-box;
+      border: 1px solid rgba($green, 0.3) ;
+      background-repeat: no-repeat;
+      background-size: contain;
+      border-radius: 20px;
+      z-index: -1;
+    }
+    &:hover::after{
+      opacity: 0.5;
+      border: 3px solid rgba($green, 0.3) ;
+    }
+    &_milk::after{
+      background-image: url(../images/milk.png);
+    }
+    &_pasta::after{
+      background-image: url(../images/pasta.png);
+    }
+    &_meat::after{
+      background-image: url(../images/meat.png);
+    }
+  
   }
   &-pagination{
     display: none;
   }
   &-button-next, &-button-prev{
     top:-60px;
+    right: 0px;
     &::after{
       color: $green;
     }
   }
   &-button-prev{
     left:initial;
-    right: 100px;
+    right: 80px;
   }
 }
