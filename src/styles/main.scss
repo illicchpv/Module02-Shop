@@ -1,4 +1,4 @@
-
+// this main.scss imported in root.scss
 .logo {
   display: block;
   background-image: url(../images/logo.svg);
@@ -213,14 +213,6 @@
     .title__span{
       display:block;
     }
-  }
-}
-
-.description{
-  margin: 0;
-  line-height: 1.5;
-  &_size-s{
-    font-size: 1.8rem;
   }
 }
 

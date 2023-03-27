@@ -1,0 +1,39 @@
+// this offer.scss imported in root.scss
+.offer{
+  background-image: url(../images/bg/offer.png);
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 2rem;
+  padding-bottom: 200px;
+  &__text{
+    margin-top: 6rem;
+    max-width: 700px;
+  }
+  &__slider{
+    overflow: hidden;
+    padding-top: 100px;
+  }
+}
+.swiper{
+  overflow: initial;
+  &-wrapper{
+
+  }
+  &-slide{
+    border: 1px solid red;
+  }
+  &-pagination{
+    display: none;
+  }
+  &-button-next, &-button-prev{
+    top:-60px;
+    &::after{
+      color: $green;
+    }
+  }
+  &-button-prev{
+    left:initial;
+    right: 100px;
+  }
+}
