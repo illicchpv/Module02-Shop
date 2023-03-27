@@ -3,8 +3,8 @@
   display: block;
   background-image: url(../images/logo.svg);
   background-repeat: no-repeat;
-  background-size: cover;
-  width: 12.3rem;
+  background-size: contain;
+  width: 12rem;
   height: 3.2rem;
 }
 
@@ -39,8 +39,8 @@
   }
   &__cart{
     display: block;
-    width: 3.8rem;
-    height: 3.8rem;
+    width: 4rem;
+    height: 4rem;
     border-radius: 50%;
     background-color: $orange;
     background-image: url(../images/cart-white.svg);
@@ -70,8 +70,7 @@
   background-size: cover;
   position: relative;
   padding-bottom: 187px;
-  // &__text{
-  // }
+  z-index: 0;
   &__item{
     margin-left: 12rem;
     max-width: 378px;
@@ -87,8 +86,8 @@
     gap: 30px;
   }
   &__cover{
-    flex-basis: 763px;
-    height: 763px;
+    flex-basis: 758px;
+    height: 758px;
     border: 1px solid rgba($green,0.4);
     border-radius: 50%;
     display: flex;
@@ -98,8 +97,8 @@
     position: relative;
   }
   &__line{
-    width: 658px; 
-    height: 658px;
+    width: 656px; 
+    height: 656px;
     // box-shadow: 0 0 0 1px rgba($green,0.4), 0 0 0 53px white, 0 0 0 54px rgba($green,0.4);
     border: 1px solid rgba($green,0.4);
     border-radius: 50%;
@@ -112,6 +111,9 @@
     width: 90%; 
     box-shadow: 5px 15px 10px 0px rgba($green,0.50);
     border-radius: 50%;
+  }
+  &__text{
+    padding-top: 4rem;
   }
   &__btn{
     border: none;
@@ -169,18 +171,21 @@
     top: 0;
     left: 37%;
     width: 85px;    
+    z-index: -1;
   }
   &__avocado {
     position: absolute;
-    top: 42px;
+    top: 56px;
     right: 0;
     width: 194px;
+    z-index: -1;
   }
   &__pepper {
     position: absolute;
-    top: 30%;
+    top: 36%;
     left: 47px;
     width: 86px;
+    z-index: -1;
   }  
   &__beans {
     position: absolute;
@@ -213,6 +218,7 @@
 
 .description{
   margin: 0;
+  line-height: 1.5;
   &_size-s{
     font-size: 1.8rem;
   }
@@ -220,6 +226,7 @@
 
 .link{
   color:$white;
+  letter-spacing: .13rem;
   text-transform: uppercase;
   text-decoration: none;
   padding: 2.5rem 4.2rem;
