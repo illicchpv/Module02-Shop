@@ -24,7 +24,7 @@
     position: relative;
     border-radius: 20px;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     &__title{
       font-family: $font-corm;
       font-weight: 700;
@@ -58,22 +58,33 @@
       position: relative;
       letter-spacing: .13rem;
       text-transform: uppercase;
+      &:hover{
+        opacity: 1;
+        &::before{
+          opacity: 1;
+        }
+      }
+      &::before{
+        content: '';
+        position: absolute;
+        left: 0; top: -6px;
+        width: 31px;
+        height: 31px;
+        background-image: url(../images/plus.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: .8;
+      }
     }
-    &__link::before{
-      content: '';
-      position: absolute;
-      left: 0; top: -6px;
-      width: 31px;
-      height: 31px;
-      background-image: url(../images/plus.svg);
-    }
+    //???
     &:hover{
       .swiper-slide__title{
         position: static;
       }
-       .swiper-slide__text{
+      .swiper-slide__text{
         display: block;
-      }     .swiper-slide__link{
+      }     
+      .swiper-slide__link{
         display: inline-block;
       }
     }
@@ -105,20 +116,28 @@
     &_meat::after{
       background-image: url(../images/meat.png);
     }
-  
   }
   &-pagination{
     display: none;
   }
   &-button-next, &-button-prev{
     top:-60px;
-    right: 0px;
+    // right: 0px;
+    &:hover{
+      &::after{
+        color: rgba($green, 1);
+      }
+    }
     &::after{
-      color: $green;
+      color: rgba($green, 0.4);
+      font-size: 20px;
     }
   }
+  &-button-next{
+    right: -8px;
+  }  
   &-button-prev{
-    left:initial;
-    right: 80px;
+    left: initial;
+    right: 72px;
   }
 }
