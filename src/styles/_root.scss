@@ -16,11 +16,31 @@ body{
   font-family: $font;
   color: $green;
 }
+.listClr{
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
 .container{
   margin: 0 auto;
   max-width: 1440px;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.title{
+  font-family: $font-corm;
+  font-weight: 700;
+  font-size: 8rem;
+  margin: 0;
+  &__span{
+    font-style: italic;
+  }
+  &_block{
+    .title__span{
+      display:block;
+    }
+  }
 }
 
 .description{
@@ -34,5 +54,6 @@ body{
   }
 }
 
-@import 'main';
-@import 'offer';
+@import '01main';
+@import '02offer';
+@import '03about';

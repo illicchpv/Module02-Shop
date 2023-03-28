@@ -1,0 +1,61 @@
+// this 03about.scss imported in _root.scss
+.about{
+  background-image: url(../images/bg/about.png);
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $green;
+  &-title_lineH{
+    line-height: 82px;
+  }
+  &__box{
+    margin-top: 93px;
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-end;
+  }
+  &__text{
+    padding-left: 112px;
+    max-width: 600px;
+    font-family: $font-jost;
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
+  &__list{
+    display: flex;
+    gap: 73px;
+  }
+  &__item{
+    font-family: $font-corm;
+    font-size: 3rem;
+    font-weight: 500;
+    font-style: italic;
+    display: inline-block;
+    width: 110px;
+    text-align: center;
+    position: relative;
+    &::after{
+      content: '';
+        border-radius: 50%;
+        border: 1px solid rgba($green, .4);
+        display: block;
+        position: absolute;
+        width: 88px; height: 88px;
+        top: -100px;
+        left: calc(50% - 44px);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &_1::after{
+      background-image: url(../images/about1.svg);
+      background-size: 43px 41px;
+    }
+    &_2::after{
+      background-image: url(../images/about2.svg);
+      background-size: 39px 39px;
+    }
+    &_3::after{
+      background-image: url(../images/about3.svg);
+      background-size: 45px 39px;    }
+  }
+}

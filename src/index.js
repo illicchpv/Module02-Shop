@@ -2,7 +2,7 @@ import "normalize.css";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import "./styles/root.scss";
+import "./styles/_root.scss";
 
 import "./index.html";
 
