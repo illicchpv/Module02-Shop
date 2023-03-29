@@ -38,3 +38,24 @@ var swiper = new Swiper(".offerSwiper", {
   },
   modules: [Navigation, Pagination],
 });
+
+var swiper = new Swiper(".trendsSwiper", {
+  slidesPerView: 3,
+  spaceBetween: 20,
+  slidesPerGroup: 3,
+  loop: true,
+  loopFillGroupWithBlank: true,
+  // { nameclass: { wrapperClass: 'view-content', }, },
+  // classNames: 'swiper-slide_trends',
+  // slideClass: 'swiper-slide_trends',
+  // wrapperClass: 'swiper-wrapper_trends',
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  modules: [Navigation, Pagination],
+});
