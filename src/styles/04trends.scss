@@ -145,6 +145,10 @@
     background-repeat: no-repeat;
     background-size: 28px;
     padding: 0;
+    opacity: .4;
+    &:hover{
+      opacity: 1;
+    }
     &_disabled{
       pointer-events: none;
       opacity: .4;
@@ -162,5 +166,13 @@
     width: 46px;
     border: none;
     padding: 0;
+  }
+  &_min{
+    .counter__btn{
+      width: 41px; height: 41px;
+    }
+    .counter__input{
+      width: 32px;
+    }
   }
 }

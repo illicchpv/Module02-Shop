@@ -45,6 +45,11 @@
         border: 1px solid $orange;
         opacity: 1;
       }
+      &:hover{
+        color: $orange;
+        border: 1px solid $orange;
+        opacity: 1;
+      }
     }
   }
   &__greed{
@@ -60,109 +65,176 @@
       display: grid;  
     }
   }
-  // catalog__item
+
+
   &__item{
     width: 345px; 
     height: 516px;
     box-sizing: border-box;
-    // padding-left: 32px;
-    // padding-right: 32px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-
-    border: 1px solid rgba($green, 0.3);
+    border: 1px solid rgba($green, 0.4);
     border-radius: 20px;
-    // background-color: aquamarine;
+
+    display: grid;
+    grid-template-rows: 1fr 50px 60px 58px 95px;
+    &:hover{
+      box-shadow: 0 0 0 2px rgba($green, 0.4) inset; 
+    }
+    &_cmn{
+      height: 100%;
+      box-sizing: border-box;
+      margin: 0;
+    }
   }
   &__img{
-    max-height: 207px;
-    object-fit: contain;
-    flex-grow: 1;
-    margin-bottom: 15px;
+    img{
+      display: block;
+      margin: 0 auto;
+      max-height: 250px;
+      overflow: hidden;
+      box-sizing: border-box;
+      padding: 20px;
+    }
   }
   &__title{
+    margin-left: 29px;
     font-family: $font-corm;
     font-weight: 700;
     font-size: 3rem;
-    margin: 0;
-    width: 100%;
-    margin-left: 58px;
   }
   &__description{
+    margin-left: 29px;
     font-family: "Jost", sans-serif;
     font-size: 1.6rem;
     font-weight: 400;
     opacity: 0.7;
-    width: 100%;
-    margin-left: 58px;
-    margin-top: 19px;
     line-height: 1.5;
-    height: 40px;
-    margin-bottom: -11px;
   }
   &__price{
-    margin-left: 58px;
+    margin-left: 29px;
     font-family: $font-jost;
     font-size: 24px;
     font-weight: 400;
     color: $green;        
-    width: 100%;
-    margin-bottom: 27px;
   }
   &__footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // margin-left: -32px;
-    // width: calc(100% + 64px) ;
-    width: 100%;
+    margin-top: -20px;
+
     box-sizing: border-box;
     padding-left: 26px;      
     padding-right: 20px;
-    // background-color: red;  
-    margin-bottom: 41px;
   }
+
+  // // catalog__item
+  // &__item{
+  //   width: 345px; 
+  //   height: 516px;
+  //   box-sizing: border-box;
+  //   // padding-left: 32px;
+  //   // padding-right: 32px;
+
+  //   // display: flex;
+  //   // flex-direction: column;
+  //   // align-items: center;
+  //   // justify-content: flex-end;
+
+  //   border: 1px solid rgba($green, 0.4);
+  //   border-radius: 20px;
+  //   // background-color: aquamarine;
+  //   &:hover{
+  //     // border: 3px solid rgba($green, 0.3) ;     
+  //     box-shadow: 0 0 0 2px rgba($green, 0.4) inset; 
+  //   }
+  // }
+  // &__img{
+  //   max-height: 207px;
+  //   object-fit: contain;
+  //   flex-grow: 1;
+  //   margin-bottom: 15px;
+  // }
+  // &__title{
+  //   font-family: $font-corm;
+  //   font-weight: 700;
+  //   font-size: 3rem;
+  //   margin: 0;
+  //   width: 100%;
+  //   margin-left: 58px;
+  // }
+  // &__description{
+  //   font-family: "Jost", sans-serif;
+  //   font-size: 1.6rem;
+  //   font-weight: 400;
+  //   opacity: 0.7;
+  //   width: 100%;
+  //   margin-left: 58px;
+  //   margin-top: 19px;
+  //   line-height: 1.5;
+  //   height: 40px;
+  //   margin-bottom: -11px;
+  // }
+  // &__price{
+  //   margin-left: 58px;
+  //   font-family: $font-jost;
+  //   font-size: 24px;
+  //   font-weight: 400;
+  //   color: $green;        
+  //   width: 100%;
+  //   margin-bottom: 27px;
+  // }
+
+  // &__footer{
+  //   display: flex;
+  //   justify-content: space-between;
+  //   align-items: center;
+  //   // margin-left: -32px;
+  //   // width: calc(100% + 64px) ;
+  //   width: 100%;
+  //   box-sizing: border-box;
+  //   padding-left: 26px;      
+  //   padding-right: 20px;
+  //   // background-color: red;  
+  //   margin-bottom: 41px;
+  // }
 
 }
 // .catalog__greed:nth-child(4){
 //   display: grid;  
 // }
 
-.c-counter{
-  display: flex;
-  justify-content: space-between;
-  &__btn{
-    cursor: pointer;
-    width: 41px; height: 41px;
-    border: 1px solid $green;
-    border-radius: 50%;
-    background-color: transparent;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 28px;
-    padding: 0;
-    &_disabled{
-      pointer-events: none;
-      opacity: .4;
-    }
-  }
-  &__minus{
-    background-image: url(../images/minus-counter.svg);
-  }
-  &__plus{
-    background-image: url(../images/plus-counter.svg);
-  }
-  &__input{
-    text-align: center;
-    font-size: 2.4rem;
-    width: 32px;
-    border: none;
-    padding: 0;
-  }
-}
+// .c-counter{
+//   display: flex;
+//   justify-content: space-between;
+//   &__btn{
+//     cursor: pointer;
+//     width: 41px; height: 41px;
+//     border: 1px solid $green;
+//     border-radius: 50%;
+//     background-color: transparent;
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: 28px;
+//     padding: 0;
+//     &_disabled{
+//       pointer-events: none;
+//       opacity: .4;
+//     }
+//   }
+//   &__minus{
+//     background-image: url(../images/minus-counter.svg);
+//   }
+//   &__plus{
+//     background-image: url(../images/plus-counter.svg);
+//   }
+//   &__input{
+//     text-align: center;
+//     font-size: 2.4rem;
+//     width: 32px;
+//     border: none;
+//     padding: 0;
+//   }
+// }
 
 .more{
   position: relative;
@@ -172,7 +244,7 @@
     display: inline-block;
     position: relative;
 
-    opacity: 0.80;
+    opacity: 0.8;
     text-decoration: none;
     text-transform: uppercase;
     color: $green;
@@ -183,14 +255,17 @@
     margin-bottom: 20px;
     &:hover{
       opacity: 1;
+      &::before{
+        opacity: 1;
+      }
     }
-        
-    ::before{
+    &::before{
       content: '';
       position: absolute;
       background-image: url(../images/more.svg);
       width: 25px; height: 25px;
       left: -30px; top:-6px;
+      opacity: 0.8;
     } 
   }
 }
