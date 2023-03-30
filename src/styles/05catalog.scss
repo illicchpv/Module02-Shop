@@ -6,7 +6,7 @@
   background-size: cover;
 
   color: $green;
-  margin-top: 50px;
+  padding-top: 50px;
 
   &-tabs{
     margin-top: 87px;
@@ -19,13 +19,6 @@
     &__item{
     }
     &__link{
-      // color:$white;
-      // letter-spacing: .13rem;
-      // text-decoration: none;
-      // padding: 2.5rem 4.2rem;
-      // box-shadow: 0px 1rem 1.1rem .2rem rgba(207,92,13,0.2);
-      // border-radius: 3.8rem;
-
       display: inline-block;
       text-decoration: none;
       color: $green;
@@ -53,19 +46,14 @@
     }
   }
   &__greed{
-    // display: grid;
-    // grid-template-columns: repeat(4, 1fr);
-
     display: grid;
     display: none;
-    // grid-template-columns: 364px 364px 364px 364px;
     grid-template-columns: repeat(4, 1fr);
     gap: 19px;
     &_active{
       display: grid;  
     }
   }
-
 
   &__item{
     width: 345px; 
@@ -127,121 +115,12 @@
     padding-left: 26px;      
     padding-right: 20px;
   }
-
-  // // catalog__item
-  // &__item{
-  //   width: 345px; 
-  //   height: 516px;
-  //   box-sizing: border-box;
-  //   // padding-left: 32px;
-  //   // padding-right: 32px;
-
-  //   // display: flex;
-  //   // flex-direction: column;
-  //   // align-items: center;
-  //   // justify-content: flex-end;
-
-  //   border: 1px solid rgba($green, 0.4);
-  //   border-radius: 20px;
-  //   // background-color: aquamarine;
-  //   &:hover{
-  //     // border: 3px solid rgba($green, 0.3) ;     
-  //     box-shadow: 0 0 0 2px rgba($green, 0.4) inset; 
-  //   }
-  // }
-  // &__img{
-  //   max-height: 207px;
-  //   object-fit: contain;
-  //   flex-grow: 1;
-  //   margin-bottom: 15px;
-  // }
-  // &__title{
-  //   font-family: $font-corm;
-  //   font-weight: 700;
-  //   font-size: 3rem;
-  //   margin: 0;
-  //   width: 100%;
-  //   margin-left: 58px;
-  // }
-  // &__description{
-  //   font-family: "Jost", sans-serif;
-  //   font-size: 1.6rem;
-  //   font-weight: 400;
-  //   opacity: 0.7;
-  //   width: 100%;
-  //   margin-left: 58px;
-  //   margin-top: 19px;
-  //   line-height: 1.5;
-  //   height: 40px;
-  //   margin-bottom: -11px;
-  // }
-  // &__price{
-  //   margin-left: 58px;
-  //   font-family: $font-jost;
-  //   font-size: 24px;
-  //   font-weight: 400;
-  //   color: $green;        
-  //   width: 100%;
-  //   margin-bottom: 27px;
-  // }
-
-  // &__footer{
-  //   display: flex;
-  //   justify-content: space-between;
-  //   align-items: center;
-  //   // margin-left: -32px;
-  //   // width: calc(100% + 64px) ;
-  //   width: 100%;
-  //   box-sizing: border-box;
-  //   padding-left: 26px;      
-  //   padding-right: 20px;
-  //   // background-color: red;  
-  //   margin-bottom: 41px;
-  // }
-
 }
-// .catalog__greed:nth-child(4){
-//   display: grid;  
-// }
-
-// .c-counter{
-//   display: flex;
-//   justify-content: space-between;
-//   &__btn{
-//     cursor: pointer;
-//     width: 41px; height: 41px;
-//     border: 1px solid $green;
-//     border-radius: 50%;
-//     background-color: transparent;
-//     background-position: center;
-//     background-repeat: no-repeat;
-//     background-size: 28px;
-//     padding: 0;
-//     &_disabled{
-//       pointer-events: none;
-//       opacity: .4;
-//     }
-//   }
-//   &__minus{
-//     background-image: url(../images/minus-counter.svg);
-//   }
-//   &__plus{
-//     background-image: url(../images/plus-counter.svg);
-//   }
-//   &__input{
-//     text-align: center;
-//     font-size: 2.4rem;
-//     width: 32px;
-//     border: none;
-//     padding: 0;
-//   }
-// }
 
 .more{
   position: relative;
   text-align: center;
   &__link{
-    // padding-left: 30px;
     display: inline-block;
     position: relative;
 
@@ -254,6 +133,7 @@
     letter-spacing: 2px;
     margin-top: 62px;
     margin-bottom: 20px;
+    margin-left: 40px;
     &:hover{
       opacity: 1;
       &::before{

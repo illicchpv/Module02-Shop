@@ -1,0 +1,130 @@
+// this 07contact.scss imported in _root.scss
+.contact{
+  background-image: url(../images/bg/contact.png);
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  padding-top: 100px;
+  padding-bottom: 100px;
+  &-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+    &__text{
+      max-width: 400px;
+      flex-grow: 1;
+      margin-top: 4rem;
+      margin-left: 12rem;
+    }
+    &__list{
+      padding-left: 0;
+      margin-top: 5.4rem;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 2.8rem;
+    }
+
+    // ul{
+    //   // background-color: red;
+    // }
+    &__link{
+      padding-left: 52px;
+      display: block;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      position: relative;
+
+      text-decoration: none;
+      color: $green;
+      font-size: 2.4rem;
+      font-weight: 500;
+
+      &:hover{
+        color: $orange;
+      }
+      
+      &::before{
+        content: '';
+        position: absolute;
+        left: 0; top: 2px;
+        width: 2.5rem;
+        height: 2.5rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: .8;
+      }
+      &_tel::before{
+        background-image: url(../images/tel_2.svg);
+      }
+      &_mail::before{
+        background-image: url(../images/mail_2.svg);
+      }
+
+    }
+
+
+    &__form{
+      flex-basis: 589px;
+    }
+  }
+}
+.card{
+  // background-color: red;
+
+  border: 2px solid rgba($green, .4);
+  padding: 3.2rem 5.8rem 4rem;
+  border-radius: 2rem;
+
+  &__title{
+    font-size: 30px;
+    font-family: $font-corm;
+    margin-top: 0;
+  }
+  &__label{
+    font-size: 12px;
+    margin-bottom: 1rem;
+    display: block;
+    margin-left: .6rem;
+  }
+  &__input{
+    font-size: 16px;
+    border: 1px solid rgba($green, .4);
+    border-radius: 2rem;
+    margin-bottom: 2.8rem;
+    display: block;
+    padding: 2.2rem 3rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+    &:focus{
+      border: 1px solid rgba($green, 1);
+      outline: none;
+    }
+    &:invalid{
+      border: 1px solid rgba(red, 1);
+    }
+  }
+  &__check{
+    font-size: 1.2rem;
+    color:rgba($green, .6);
+    line-height: 1.5;
+    max-width: 360px;
+    margin-top: 1.6rem;
+    margin-bottom: 0;
+  }
+  &__link{
+    margin-top: 1.2rem;
+    cursor: pointer;
+    &:hover{
+      background-color: #BF601F; 
+    }
+  }
+  &__docs{
+    color:rgba($green, .6);
+    text-decoration: none;
+    border-bottom: 1px solid #ecedec;
+  }
+}

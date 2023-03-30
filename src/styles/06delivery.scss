@@ -1,46 +1,65 @@
 // this 06delivery.scss imported in _root.scss
 .delivery{
-  font-family: $font-jost;
-  font-size: 1.8rem;
-  font-weight: 400;
+  background-image: url(../images/bg/delivery.png);
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  color: $green;
+  padding-top: 125px;
+  
   &__box{
-    // background-color: aquamarine;
-    margin-top: 58px;
+    margin-top: 78px;
+
     display: flex;
     justify-content: space-between;
-    align-items:center;
-    height: 182px; //???
   }
   &__text{
     padding-left: 125px;
-    max-width: 600px;
-  }
-  &__description{
-      font-size: 1.6rem;
-      font-weight: 400;
-      opacity: 0.70;
-      width: 100%;
-      line-height: 1.5;
-      letter-spacing: 1px;
+    flex-basis: 600px;
   }
   &__space1{
-    height: 1px;
-    background-color: red;
+    height: 31px;
   }
+  &__description{
+    margin: 0;
+
+    font-size: 1.6rem;
+    font-weight: 400;
+    opacity: 0.70;
+    width: 100%;
+    line-height: 1.5;
+    letter-spacing: 1px;
+  }
+  &__conditions{
+    text-decoration: none;
+    color: $green;
+    cursor: pointer;
+    opacity: 0.7;
+    border-bottom: 1px solid rgba($green, 0.7) ;
+    &:hover{
+      opacity: 1;
+      border-bottom: 1px solid rgba($green, 1) ;
+    }
+  }
+
   &__right{
-    // background-color: burlywood;
-    max-width: 600px;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding-left: 125px;
+    flex-basis: 504px;
+    margin-right: 82px;
+  }
+  &__space2{
+    flex-grow: 1;
+  }
+  &__discount{
+    color: $orange;
   }
 
   // 
   &__list{
     display: flex;
-    // align-items: center;
+    align-items: flex-end;
     gap: 30px;
   }
   &__item{
@@ -54,6 +73,8 @@
     &_paypal{
       height: 24px;
     }
+    &:hover{
+      opacity: 1;
+    }
   }
 }
-

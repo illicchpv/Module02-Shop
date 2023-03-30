@@ -1,9 +1,5 @@
 // this 01main.scss imported in _root.scss
 
-// :root {
-//   --swiper-navigation-size: 20px;
-// }
-
 .logo {
   display: block;
   background-image: url(../images/logo.svg);
@@ -73,6 +69,7 @@
   background-position-x: center;
   background-repeat: no-repeat;
   background-size: cover;
+  
   position: relative;
   padding-bottom: 187px;
   z-index: 0;
@@ -215,10 +212,16 @@
   background-color: $orange;
   box-shadow: 0px 1rem 1.1rem .2rem rgba(207,92,13,0.2);
   border-radius: 3.8rem;
+  border: none;
   display: inline-block;
   &_s{
     font-size: 14px;
     padding: 2.1rem 3.5rem;
     border-radius: calc(7px + 2.1rem);
+  }
+  &_h{
+    &:hover{
+      background-color: #BF601F; 
+    }
   }
 }
