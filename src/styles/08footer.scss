@@ -1,0 +1,124 @@
+// this 07footer.scss imported in _root.scss
+.footer{
+  margin-top: 60px;
+  border-top: 1px solid $green; // rgba(39, 48, 15, 1);
+  color: $green;
+  font-family: $font-jost;
+
+  &__box{
+    margin-top: 8.6rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__list:nth-child(1){
+    margin-top: -2px;
+  }
+  &__list:nth-child(2){
+    margin-top: -9px;
+  }
+  &__list:nth-child(3){
+    margin-top: -7px;
+  }
+  &__list:nth-child(4){
+    margin-top: -13px;
+  }
+
+  &__item{
+    margin-bottom: 2.9rem;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  &__link{
+    text-decoration: none;
+    color: $green;
+    display: block;
+  }
+
+  &__contact{
+    text-align: right;
+  }
+  &__contact > a{
+    text-decoration: none;
+    color: $green;
+    display: block;
+
+    font-weight: 400;
+    &:hover{
+      color: $orange;
+    }
+  }
+  &__tel{
+    margin-bottom: 3.9rem;
+    font-size: 27px;
+  }
+  &__mail{
+    margin-bottom: 2.8rem;
+    font-size: 18px;
+  }
+  &-social{
+    &__item{
+      display: inline-block;
+    }
+    &__link{
+      opacity: 0.5;
+      width: 52px; height: 52px;
+      display: inline-block;
+      margin-left: 28px;
+
+      box-sizing: border-box;
+      border: 1px solid rgba(39, 48, 15, .8);
+      border-radius: 50%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 40%;
+      
+      &:hover{
+        opacity: 1;
+        border: 1px solid rgba(39, 48, 15, 1);
+      }
+      &_vk{
+        background-image: url(../images/social/vk.svg);
+      }
+      &_inst{
+        background-image: url(../images/social/inst.svg);
+      }
+      &_fb{
+        background-image: url(../images/social/fb.svg);
+      }
+    }
+  }
+
+  &__text{
+    margin-top: 34px;
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__copy{
+    opacity: 0.6;
+  }
+  &__author{
+    color: rgba($green, 0.6);
+    a{
+      text-decoration: none;
+      color: rgba($green, 0.6);
+      transition: all 0.7s;
+    }
+    &:hover a{
+      // opacity: 1;
+      color: $green;
+    }
+  }
+}
+// .footer__author:hover{
+//   // color: red;
+// }
+// .footer__author:hover a{
+//   color: red;
+// }
+
+// font-family: "jost-book";
+// text-align: left;
