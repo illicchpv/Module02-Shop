@@ -1,124 +1,278 @@
 // this 07footer.scss imported in _root.scss
-.footer{
-  margin-top: 60px;
+.footer {
+  padding-top: 88px;
   border-top: 1px solid $green; // rgba(39, 48, 15, 1);
   color: $green;
   font-family: $font-jost;
 
-  &__box{
-    margin-top: 8.6rem;
+  // .footer__box
+  &__box {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 2.3rem;
+      gap: 5px;
+  }
+  &__info {
+      margin-top: -8px;
+      display: flex;
+      justify-content: space-between;
+      flex-basis: 66.5%;
+      flex-wrap: nowrap;
+      gap: 5px;
+  }
+  // .footer__list
+  &__list {
+      margin: 0;
+      padding-left: 0;
+      list-style-type: none;
+      font-size: 1.8rem;
+  }
+  &__list-nav {
+      
+  }
+  // .footer__item
+  &__item {
+      margin-bottom: 2rem;
+      transition: all .3s ease;
+      cursor: pointer;
+      
+      &:hover {
+          color: $orange;
+      }
+  }
+  // .footer__link
+  &__link {
+      text-decoration: none;
+      color: $green;
+      transition: all .3s ease;
+      &:hover {
+          color: $orange;
+      }
+  }
+  // .footer__contact
+  &__contact {
+      display: flex;
+      flex-direction: column;
+      
+  }
+  &__contact-box {
+      display: flex;
+      flex-direction: column;
+  }
+  // .footer__tel
+  &__tel {
+      font-size: 2.7rem;
+      text-decoration: none;
+      margin-bottom: 3rem;
+      color: $green;
+      transition: all .3s ease;
+      
+      &:hover {
+          color: $orange;
+      }
+  }
+  // .footer__mail
+  &__mail {
+      font-size: 1.8rem;
+      text-decoration: none;
+      color: $green;
+      transition: all .3s ease;
+      &:hover {
+          color: $orange;
+      }
+
+  }
+  // .footer__text
+  &__text {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 7.4rem;
+      color: rgba( $green, .6);
+  }
+
+  // .footer__copy
+  &__copy {}
+  // .footer__author
+  &__author {
+      cursor: pointer;
+  }
+  &__author-link {
+      text-decoration: none;
+      color: rgba( $green, .6);
+      transition: all .3s ease;
+  }
+     
+}
+.footer-social {
+    list-style-type: none;
     display: flex;
+    padding-left: 0;
     justify-content: space-between;
-  }
-
-  &__list:nth-child(1){
-    margin-top: -2px;
-  }
-  &__list:nth-child(2){
-    margin-top: -9px;
-  }
-  &__list:nth-child(3){
-    margin-top: -7px;
-  }
-  &__list:nth-child(4){
-    margin-top: -13px;
-  }
-
-  &__item{
-    margin-bottom: 2.9rem;
-    font-size: 18px;
-    font-weight: 400;
-  }
-
-  &__link{
-    text-decoration: none;
-    color: $green;
-    display: block;
-  }
-
-  &__contact{
-    text-align: right;
-  }
-  &__contact > a{
-    text-decoration: none;
-    color: $green;
-    display: block;
-
-    font-weight: 400;
-    &:hover{
-      color: $orange;
+    margin-top: 2.6rem;
+  
+    // .footer-social__item
+    &__item {}
+  
+    // .footer-social__link
+    &__link {
+      display: block;
+      border: 1px solid $green;
+      border-radius: 100%;
+      width: 50px;
+      height: 50px;
+      opacity: .8;
+      transition: all .3s ease;
+  
+      &:hover {
+        opacity: 1;
+      }
     }
-  }
-  &__tel{
-    margin-bottom: 3.9rem;
-    font-size: 27px;
-  }
-  &__mail{
-    margin-bottom: 2.8rem;
-    font-size: 18px;
-  }
-  &-social{
-    &__item{
-      display: inline-block;
-    }
-    &__link{
-      opacity: 0.5;
-      width: 52px; height: 52px;
-      display: inline-block;
-      margin-left: 28px;
-
-      box-sizing: border-box;
-      border: 1px solid rgba(39, 48, 15, .8);
-      border-radius: 50%;
+  
+    // .footer-social__vk
+    &__vk {
+      background-image: url(../images/social/vk.svg);
+      background-size: 26px;
       background-repeat: no-repeat;
       background-position: center;
-      background-size: 40%;
+    }
+  
+    // .footer-social__inst
+    &__inst {
+      background-image: url(../images/social/inst.svg);
+      background-size: 18px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  
+    // .footer-social__fb
+    &__fb {
+      background-image: url(../images/social/fb.svg);
+      background-size: 18px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+//   ===========================================================
+// .footer{
+//   margin-top: 60px;
+//   border-top: 1px solid $green; // rgba(39, 48, 15, 1);
+//   color: $green;
+//   font-family: $font-jost;
+
+//   &__box{
+//     margin-top: 8.6rem;
+//     display: flex;
+//     justify-content: space-between;
+//   }
+
+//   &__list:nth-child(1){
+//     margin-top: -2px;
+//   }
+//   &__list:nth-child(2){
+//     margin-top: -9px;
+//   }
+//   &__list:nth-child(3){
+//     margin-top: -7px;
+//   }
+//   &__list:nth-child(4){
+//     margin-top: -13px;
+//   }
+
+//   &__item{
+//     margin-bottom: 2.9rem;
+//     font-size: 18px;
+//     font-weight: 400;
+//   }
+
+//   &__link{
+//     text-decoration: none;
+//     color: $green;
+//     display: block;
+//   }
+
+//   &__contact{
+//     text-align: right;
+//   }
+//   &__contact > a{
+//     text-decoration: none;
+//     color: $green;
+//     display: block;
+
+//     font-weight: 400;
+//     &:hover{
+//       color: $orange;
+//     }
+//   }
+//   &__tel{
+//     margin-bottom: 3.9rem;
+//     font-size: 27px;
+//   }
+//   &__mail{
+//     margin-bottom: 2.8rem;
+//     font-size: 18px;
+//   }
+//   &-social{
+//     &__item{
+//       display: inline-block;
+//     }
+//     &__link{
+//       opacity: 0.5;
+//       width: 52px; height: 52px;
+//       display: inline-block;
+//       margin-left: 28px;
+
+//       box-sizing: border-box;
+//       border: 1px solid rgba(39, 48, 15, .8);
+//       border-radius: 50%;
+//       background-repeat: no-repeat;
+//       background-position: center;
+//       background-size: 40%;
       
-      &:hover{
-        opacity: 1;
-        border: 1px solid rgba(39, 48, 15, 1);
-      }
-      &_vk{
-        background-image: url(../images/social/vk.svg);
-      }
-      &_inst{
-        background-image: url(../images/social/inst.svg);
-      }
-      &_fb{
-        background-image: url(../images/social/fb.svg);
-      }
-    }
-  }
+//       &:hover{
+//         opacity: 1;
+//         border: 1px solid rgba(39, 48, 15, 1);
+//       }
+//       &_vk{
+//         background-image: url(../images/social/vk.svg);
+//       }
+//       &_inst{
+//         background-image: url(../images/social/inst.svg);
+//       }
+//       &_fb{
+//         background-image: url(../images/social/fb.svg);
+//       }
+//     }
+//   }
 
-  &__text{
-    margin-top: 34px;
-    font-size: 16px;
-    font-weight: 400;
-    display: flex;
-    justify-content: space-between;
-  }
-  &__copy{
-    opacity: 0.6;
-  }
-  &__author{
-    color: rgba($green, 0.6);
-    a{
-      text-decoration: none;
-      color: rgba($green, 0.6);
-      transition: all 0.7s;
-    }
-    &:hover a{
-      // opacity: 1;
-      color: $green;
-    }
-  }
-}
-// .footer__author:hover{
-//   // color: red;
+//   &__text{
+//     margin-top: 34px;
+//     font-size: 16px;
+//     font-weight: 400;
+//     display: flex;
+//     justify-content: space-between;
+//   }
+//   &__copy{
+//     opacity: 0.6;
+//   }
+//   &__author{
+//     color: rgba($green, 0.6);
+//     a{
+//       text-decoration: none;
+//       color: rgba($green, 0.6);
+//       transition: all 0.7s;
+//     }
+//     &:hover a{
+//       // opacity: 1;
+//       color: $green;
+//     }
+//   }
 // }
-// .footer__author:hover a{
-//   color: red;
-// }
+// // .footer__author:hover{
+// //   // color: red;
+// // }
+// // .footer__author:hover a{
+// //   color: red;
+// // }
 
-// font-family: "jost-book";
-// text-align: left;
+// // font-family: "jost-book";
+// // text-align: left;

@@ -6,9 +6,9 @@
   background-size: cover;
   
   padding-top: 2rem;
-  padding-bottom: 12.8rem;
+  padding-bottom: 16.8rem;
   &__text{
-    margin-top: 6rem;
+    margin-top: 5.3rem;
     max-width: 700px;
   }
   // swiper in offer
@@ -106,13 +106,13 @@
         border: 3px solid rgba($green, 0.3) ;
       }
       &_milk::after{
-        background-image: url(../images/milk.png);
+        background-image: url(../images/x_milk.png);
       }
       &_pasta::after{
-        background-image: url(../images/pasta.png);
+        background-image: url(../images/x_pasta.png);
       }
       &_meat::after{
-        background-image: url(../images/meat.png);
+        background-image: url(../images/x_meat.png);
       }
     }
   }
