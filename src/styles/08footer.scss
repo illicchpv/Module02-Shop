@@ -92,14 +92,27 @@
 
   // .footer__copy
   &__copy {}
+
   // .footer__author
-  &__author {
-      cursor: pointer;
-  }
-  &__author-link {
+//   &__author {
+//       cursor: pointer;
+//   }
+//   &__author-link {
+//       text-decoration: none;
+//       color: rgba( $green, .6);
+//       transition: all .3s ease;
+//   }
+  &__author{
+    color: rgba($green, 0.6);
+    a{
       text-decoration: none;
-      color: rgba( $green, .6);
-      transition: all .3s ease;
+      color: rgba($green, 0.6);
+      transition: all 0.7s;
+    }
+    &:hover a{
+      // opacity: 1;
+      color: $green;
+    }
   }
      
 }
