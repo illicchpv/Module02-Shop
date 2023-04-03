@@ -4,6 +4,10 @@
   display: block;
   width: 12rem;
   height: 3.2rem;
+  background-image: url(../images/logo.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+
   &_h{
     width: 17.9rem;
     height: 4.8rem;
@@ -29,7 +33,7 @@
     color:$green;
     text-decoration: none;
     &:hover{
-      color: $orange;
+      color: red; // $orange;
     }
   }
   &__tel{
@@ -121,14 +125,10 @@
     position: absolute;
     color: $green;
     text-align: left;
-    &:hover{
-      // .main__btn{
-        &::before{
-          background-color: $orange;
-          box-shadow: 0 0 0 4px rgba($white, 1), 0 0 0 5px rgba($orange, 1);
-        }
-      // }
-    }
+
+    // background-color: transparent;
+    // transition:all 1.3s;
+
     &::before{
       content: '';
       background-color: $green;
@@ -136,6 +136,16 @@
       box-shadow: 0 0 0 4px rgba($white, 1), 0 0 0 5px rgba($green, 1);
       border-radius: 50%;
       position: absolute;
+
+      // transition:all 1.3s;
+    }
+    &:hover{
+      // .main__btn{
+        &::before{
+          background-color: $orange;
+          box-shadow: 0 0 0 4px rgba($white, 1), 0 0 0 5px rgba($orange, 1);
+        }
+      // }
     }
     &_1{
       top: 96px;
@@ -207,20 +217,41 @@
   text-transform: uppercase;
   text-decoration: none;
   padding: 2.5rem 4.2rem;
-  background-color: $orange;
   box-shadow: 0px 1rem 1.1rem .2rem rgba(207,92,13,0.2);
   border-radius: 3.8rem;
   border: none;
   display: inline-block;
+  cursor: pointer;
 
+  background-color: $orange;
+  // border: 3px solid transparent;
+  &:hover{
+    background-color: $darkorange; 
+    // border: 3px solid black;
+  }
   &_s{
     font-size: 14px;
     padding: 2.1rem 3.5rem;
     border-radius: calc(7px + 2.1rem);
   }
-  &_h{
-    &:hover{
-      background-color: #BF601F; 
-    }
-  }
+  // &_h{
+  // }
 }
+// .link{
+//   color:$white;
+//   letter-spacing: .13rem;
+//   text-transform: uppercase;
+//   text-decoration: none;
+//   padding: 2.5rem 4.2rem;
+//   background-color: $orange;
+//   box-shadow: 0px 1rem 1.1rem .2rem rgba(207,92,13,0.2);
+//   border-radius: 3.8rem;
+//   border: none;
+//   display: inline-block;
+
+//   border: 3px solid transparent;
+//   transition:all 1.3s;
+// }
+// .link:hover{
+//   border: 3px solid black;
+// }

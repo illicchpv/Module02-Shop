@@ -82,6 +82,7 @@
   }
   &__item{
     opacity: 0.40;
+    transform: scale(1);
     &_mastercard{
       height: 32px;
     }
@@ -93,6 +94,7 @@
     }
     &:hover{
       opacity: 1;
+      transform: scale(1.07);
     }
   }
 }

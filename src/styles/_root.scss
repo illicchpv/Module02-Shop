@@ -6,6 +6,7 @@ $font: $font-jost;
 
 $green: #27300F;
 $orange: #d26a22; //RGBA(210, 106, 34, 1);
+$darkorange: #cf5c0d;
 $white: white;
 
 html{
@@ -57,6 +58,13 @@ body{
     font-size: 2.4rem;
     letter-spacing: 1px;
   }
+}
+
+a, a::before{
+  transition:all .3s;
+}
+.flu{
+   transition:all .3s;
 }
 
 @import '01main';

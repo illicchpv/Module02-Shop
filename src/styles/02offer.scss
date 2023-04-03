@@ -19,6 +19,7 @@
       padding: 213px 0 40px 42px;
       background-repeat: no-repeat;
       background-size: cover;
+
       &__title{
         font-family: $font-corm;
         font-weight: 700;
@@ -52,12 +53,7 @@
         position: relative;
         letter-spacing: .13rem;
         text-transform: uppercase;
-        &:hover{
-          opacity: 1;
-          &::before{
-            opacity: 1;
-          }
-        }
+
         &::before{
           content: '';
           position: absolute;
@@ -68,6 +64,13 @@
           background-size: cover;
           background-repeat: no-repeat;
           opacity: .8;
+        }
+        &:hover{
+          opacity: 1;
+
+          &::before{
+            opacity: 1;
+          }
         }
       }
       //???

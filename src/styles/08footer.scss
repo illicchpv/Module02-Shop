@@ -89,19 +89,7 @@
       padding-bottom: 7.4rem;
       color: rgba( $green, .6);
   }
-
-  // .footer__copy
-  &__copy {}
-
-  // .footer__author
-//   &__author {
-//       cursor: pointer;
-//   }
-//   &__author-link {
-//       text-decoration: none;
-//       color: rgba( $green, .6);
-//       transition: all .3s ease;
-//   }
+  // footer__author
   &__author{
     color: rgba($green, 0.6);
     a{
@@ -110,7 +98,6 @@
       transition: all 0.7s;
     }
     &:hover a{
-      // opacity: 1;
       color: $green;
     }
   }
@@ -134,8 +121,9 @@
       border-radius: 100%;
       width: 50px;
       height: 50px;
+      background-repeat: no-repeat;
+      background-position: center;
       opacity: .8;
-      transition: all .3s ease;
   
       &:hover {
         opacity: 1;
@@ -146,23 +134,17 @@
     &__vk {
       background-image: url(../images/social/vk.svg);
       background-size: 26px;
-      background-repeat: no-repeat;
-      background-position: center;
     }
   
     // .footer-social__inst
     &__inst {
       background-image: url(../images/social/inst.svg);
       background-size: 18px;
-      background-repeat: no-repeat;
-      background-position: center;
     }
   
     // .footer-social__fb
     &__fb {
       background-image: url(../images/social/fb.svg);
       background-size: 18px;
-      background-repeat: no-repeat;
-      background-position: center;
     }
 }
