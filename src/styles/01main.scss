@@ -2,9 +2,6 @@
 
 .logo {
   display: block;
-  background-image: url(../images/logo.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
   width: 12rem;
   height: 3.2rem;
   &_h{
@@ -20,6 +17,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   &__nav{
     display: flex;
     // list-style-type: none; // in listClr
@@ -69,14 +67,10 @@
 }
 
 .main {
-  background-image: url(../images/bg/main.png);
-  background-position-x: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  
   position: relative;
   padding-bottom: 169px;
   z-index: 0;
+
   &__item{
     margin-left: 12rem;
     max-width: 378px;
@@ -218,6 +212,7 @@
   border-radius: 3.8rem;
   border: none;
   display: inline-block;
+
   &_s{
     font-size: 14px;
     padding: 2.1rem 3.5rem;

@@ -1,12 +1,8 @@
 // this 04trends.scss imported in _root.scss
 .trends{
-  background-image: url(../images/bg/trends.png);
-  background-position-x: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  
   padding-top: 19rem;
   padding-bottom: 12.8rem;
+
   &__text{
     margin-top: 34px;
     max-width: 710px;
@@ -136,6 +132,7 @@
 .counter{
   display: flex;
   justify-content: space-between;
+  
   &__btn{
     cursor: pointer;
     width: 50px; height: 50px;

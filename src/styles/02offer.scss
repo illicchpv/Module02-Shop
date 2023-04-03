@@ -1,12 +1,8 @@
 // this 02offer.scss imported in _root.scss
 .offer{
-  background-image: url(../images/bg/offer.png);
-  background-position-x: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  
   padding-top: 2rem;
   padding-bottom: 16.8rem;
+
   &__text{
     margin-top: 5.3rem;
     max-width: 700px;
@@ -118,6 +114,7 @@
   }
 }
 .swiper{
+  
   &-slide{
     box-sizing: border-box;
     position: relative;

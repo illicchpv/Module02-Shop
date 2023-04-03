@@ -1,10 +1,7 @@
 // this 03about.scss imported in _root.scss
 .about{
-  background-image: url(../images/bg/about.png);
-  background-position-x: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   color: $green;
+  
   &-title_lineH{
     line-height: 86px;
   }

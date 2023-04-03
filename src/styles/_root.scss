@@ -15,6 +15,9 @@ body{
   font-size: 1.6rem;
   font-family: $font;
   color: $green;
+  background-image: url(../images/bg/general.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;  
 }
 .listClr{
   list-style-type: none;

@@ -1,18 +1,8 @@
 // this 07contact.scss imported in _root.scss
-.contact-footer{
-  background-image: url(../images/bg/contact-footer.png);
-  background-position-x: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 .contact{
-  // background-image: url(../images/bg/contact.png);
-  // background-position-x: center;
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  
   padding-top: 207px;
   padding-bottom: 160px;
+
   &-box{
     display: flex;
     align-items: center;
@@ -87,9 +77,8 @@
     }
   }
 }
-.card{
-  // background-color: red;
 
+.card{
   border: 2px solid rgba($green, .4);
   padding: 3.2rem 5.8rem 4rem;
   border-radius: 2rem;
