@@ -36,7 +36,48 @@ module.exports = ({ develop }) => ({
             },
             {
                 test: /\.html$/i,
-                loader: 'html-loader'
+                loader: 'html-loader',
+
+                // options: {
+                //     sources: {
+                //       list: [
+
+                //         {
+                //             tag: "img",
+                //             attribute: "src",
+                //             type: "src",
+  
+                //             filter: (tag, attribute, attributes, resourcePath) => {
+                //                 return true;
+                //             },
+                //         },
+                //        {
+                //             tag: "link",
+                //             attribute: "href",
+                //             type: "src",
+  
+                //             filter: (tag, attribute, attributes, resourcePath) => {
+                //                 return true;
+                //             },
+                //         },
+                //         {
+                //           tag: "meta",
+                //           attribute: "content",
+                //           type: "src",
+                //           filter: (tag, attribute, attributes, resourcePath) => {
+                //             if (
+                //               attributes.value === "og:image" ||
+                //               attributes.name === "twitter:image"
+                //             ) {
+                //               return true;
+                //             }
+                //             return false;
+                //           },
+                //         },
+                //       ],
+                //     },
+                // },
+
             },
             {
                 test: /\.css$/i,
