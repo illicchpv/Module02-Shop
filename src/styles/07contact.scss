@@ -67,6 +67,10 @@
 
       &:hover{
         color: $orange;
+        &::before{
+          // background-image:none;
+          animation: dzin 0.1s infinite;
+        }
       }
       
     }
@@ -133,5 +137,20 @@
     color:rgba($green, .6);
     text-decoration: none;
     border-bottom: 1px solid #ecedec;
+  }
+}
+
+@keyframes dzin {
+  0% { 
+    transform: rotate(0deg);
+    transform: translateX(0);
+  }
+  50% { 
+    transform: rotate(10deg);
+    transform: translateX(10px);
+  }
+  0% { 
+    transform: rotate(0deg);
+    transform: translateX(0);
   }
 }

@@ -2,7 +2,7 @@
 
 .logo {
   display: block;
-  width: 12rem;
+  flex-basis: 12rem;
   height: 3.2rem;
   background-image: url(../images/logo.svg);
   background-repeat: no-repeat;
@@ -21,7 +21,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap:8rem;
 
+  &__navigation{
+    flex-grow: 1;
+    margin-left: 4rem;
+  }
   &__nav{
     display: flex;
     // list-style-type: none; // in listClr
@@ -37,16 +42,19 @@
     }
   }
   &__tel{
-    font-weight: 500;
-    color:$green;
     text-decoration: none;
+    text-align: right;
+    font-weight: 500;
+    flex-basis: 16rem;
+    letter-spacing: .13rem;
+    color:$green;
     &:hover{
       color: $orange;
     }
   }
   &__cart{
     display: block;
-    width: 4rem;
+    flex-basis: 4rem;
     height: 4rem;
     border-radius: 50%;
     background-color: $orange;
@@ -103,7 +111,6 @@
   &__line{
     width: 656px; 
     height: 656px;
-    // box-shadow: 0 0 0 1px rgba($green,0.4), 0 0 0 53px white, 0 0 0 54px rgba($green,0.4);
     border: 1px solid rgba($green,0.4);
     border-radius: 50%;
     display: flex;
@@ -113,8 +120,8 @@
   }
   &__image{
     width: 90%; 
-    box-shadow: 5px 15px 10px 0px rgba($green,0.50);
     border-radius: 50%;
+    animation: shadow 5s infinite ease-in-out;
   }
   &__text{
     padding-top: 2rem;
@@ -234,24 +241,17 @@
     padding: 2.1rem 3.5rem;
     border-radius: calc(7px + 2.1rem);
   }
-  // &_h{
-  // }
 }
-// .link{
-//   color:$white;
-//   letter-spacing: .13rem;
-//   text-transform: uppercase;
-//   text-decoration: none;
-//   padding: 2.5rem 4.2rem;
-//   background-color: $orange;
-//   box-shadow: 0px 1rem 1.1rem .2rem rgba(207,92,13,0.2);
-//   border-radius: 3.8rem;
-//   border: none;
-//   display: inline-block;
 
-//   border: 3px solid transparent;
-//   transition:all 1.3s;
-// }
-// .link:hover{
-//   border: 3px solid black;
-// }
+@keyframes shadow {
+  0%{
+    box-shadow: 0 0 0 0px rgba($green,0.50);
+  }
+  50%{
+    transform:rotate(10deg); 
+    box-shadow: 10px 15px 30px 0px rgba($green,0.50);
+  }
+  100%{
+    box-shadow: 0 0 0 0px rgba($green,0.50);
+  }
+}
