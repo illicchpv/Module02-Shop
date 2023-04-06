@@ -1,7 +1,8 @@
 // this 011main.header.scss imported in _root.scss
 $rd_1280: 1280px;
 $rd_1170: 1170px;
-$rd_1024: 1024px;
+$rd_900: 900px;
+$rd_480: 480px;
 
 .header {
   margin: 0 auto 6rem;
@@ -68,6 +69,7 @@ $rd_1024: 1024px;
     background-position: center center;
     background-repeat: no-repeat;
     border: 1px solid $orange;
+    position: relative;
     &:hover{
       border: 1px solid $green;
       background-color: $green;
@@ -94,7 +96,11 @@ $rd_1024: 1024px;
   }
   @media (max-width: $rd_1170){
     gap:2.5%;
+    
 
+    &__nav{
+      gap: calc(29px + (100vw - 900px) * 0.1);
+    }
     &__tel{
       font-size: 0;
       // display: block;
@@ -113,13 +119,14 @@ $rd_1024: 1024px;
       }
     }
   }
-  @media (max-width: $rd_1024){
+  @media (max-width: $rd_900){
     gap:2.2rem;
 
     &__nav{
       display: none;
     }
     &__tel{
+      margin-right: 0;
       font-size: 0;
       // display: block;
       flex-basis: auto;
@@ -127,10 +134,9 @@ $rd_1024: 1024px;
       border-radius: 50%;
       background-color: transparent;
       background-image: url(../images/h-phone.svg);
-      background-size: 1.7rem 1.5rem;
+      background-size: 1.7rem 1.7rem;
       background-position: center center;
       background-repeat: no-repeat;
-      position: relative;
       border: 1px solid $green;
       &:hover{
         border: 1px solid $green;
@@ -143,7 +149,7 @@ $rd_1024: 1024px;
       border-radius: 50%;
       background-color: transparent;
       background-image: url(../images/h-menu.svg);
-      background-size: 1.7rem 1.5rem;
+      background-size: 1.7rem 1.7rem;
       background-position: center center;
       background-repeat: no-repeat;
       border: 1px solid $green;
@@ -162,9 +168,33 @@ $rd_1024: 1024px;
         background-color: transparent;
       }
     }
-      
+    &__counter{
+      font-size: .8rem;
+      color: $green;
+      position: absolute;
+      right: 1rem;
+      top: .5rem;
+    }
+  
+  }
+  @media (max-width: 480px){
+    gap:1.1rem;
+  }
+  @media (max-width: 320px){
+    &__tel{
+      width: 3.7rem; height: 3.7rem;
+      background-size: 1.4rem 1.5rem;
+    }
+    &__menu{
+      background-size: 1.6rem 1.6rem;
+    }
+    &__cart{
+      background-size: 1.6rem 1.4rem;
+    }
   }
 
+  @media (max-width: 1px){
+  }
   // @media (max-width: $rd_1150){
   //   &__nav{
   //     justify-content: space-between;
@@ -172,9 +202,6 @@ $rd_1024: 1024px;
   //   }
   // }
 
-  @media (max-width: 1320px){
-
-  }
   @media (max-width: 16px) {
     gap:1.1rem;
 
