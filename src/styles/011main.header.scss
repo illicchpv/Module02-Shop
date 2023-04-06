@@ -1,0 +1,73 @@
+// this 011main.header.scss imported in _root.scss
+.header {
+  margin: 0 auto 6rem;
+  max-width: 1440px;
+  padding: 4rem 15px 0 15px; // отступ сверху
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:8rem;
+
+  &__navigation{
+    flex-grow: 1;
+    margin-left: 4rem;
+  }
+  &__nav{
+    display: flex;
+    // list-style-type: none; // in listClr
+    // margin: 0;
+    // padding-left: 0;
+    gap:4.8rem;
+  }
+  &__link{
+    color:$green;
+    text-decoration: none;
+    &:hover{
+      color: red; // $orange;
+    }
+  }
+  &__tel{
+    text-decoration: none;
+    text-align: right;
+    font-weight: 500;
+    flex-basis: 16rem;
+    letter-spacing: .13rem;
+    color:$green;
+    &:hover{
+      color: $orange;
+    }
+  }
+  &__cart{
+    display: block;
+    flex-basis: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: $orange;
+    background-image: url(../images/cart-white.svg);
+    background-size: 1.7rem 1.5rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    border: 1px solid $orange;
+    &:hover{
+      border: 1px solid $green;
+      background-color: $green;
+    }
+  }
+  &__counter{
+    font-size: .8rem;
+    color: $white;
+    position: absolute;
+    right: 1rem;
+    top: .5rem;
+  }
+}
+
+@media (max-width: 1600px) {
+  .header{
+    &__cart{
+      display: none;
+    }
+  }
+}
+

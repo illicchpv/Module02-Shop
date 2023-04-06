@@ -1,0 +1,113 @@
+// this 012main.text.scss imported in _root.scss
+.main {
+  &__flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  &__text{
+    padding-top: 2rem;
+  }
+  &__item{
+    margin-left: 12rem;
+    max-width: 378px;
+    margin-top: 6rem;
+  }
+  &__link{
+    margin-top: 4.5rem;
+  }
+  &__cover{
+    flex-basis: 758px;
+    height: 758px;
+    border: 1px solid rgba($green,0.4);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  &__line{
+    width: 656px; 
+    height: 656px;
+    border: 1px solid rgba($green,0.4);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__image{
+    width: 90%; 
+    border-radius: 50%;
+    animation: shadowGo 5s infinite ease-in-out;
+  }
+  &__btn{
+    border: none;
+    padding: 0;
+    position: absolute;
+    color: $green;
+    text-align: left;
+
+    // background-color: transparent;
+    // transition:all 1.3s;
+
+    &::before{
+      content: '';
+      background-color: $green;
+      width: 11px; height: 11px;
+      box-shadow: 0 0 0 4px rgba($white, 1), 0 0 0 5px rgba($green, 1);
+      border-radius: 50%;
+      position: absolute;
+
+      // transition:all 1.3s;
+    }
+    &:hover{
+      // .main__btn{
+        &::before{
+          background-color: $orange;
+          box-shadow: 0 0 0 4px rgba($white, 1), 0 0 0 5px rgba($orange, 1);
+        }
+      // }
+    }
+    &_1{
+      top: 96px;
+      left: 25px;
+      &::before{
+        top: 15px;
+        right:-24px;
+      }
+    }
+    &_2{
+      top: 139px;
+      right: 49px;
+      &::before{
+        top: 15px;
+        left: -20px;
+      }
+    }
+    &_3{
+      bottom: -36px;
+      right: 245px;
+      &::before{
+        top: -18px;
+        right: 32px;
+      }
+    }
+  }
+
+}
+
+// @keyframes shadowGo {
+//   0%{
+//     box-shadow: 0 0 0 0px rgba($green,0.50);
+//   }
+//   50%{
+//     transform:rotate(10deg); 
+//     box-shadow: 10px 15px 30px 0px rgba($green,0.50);
+//   }
+//   100%{
+//     box-shadow: 0 0 0 0px rgba($green,0.50);
+//   }
+// }

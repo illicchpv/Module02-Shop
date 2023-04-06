@@ -67,11 +67,13 @@ a, a::before{
    transition:all .3s;
 }
 
-@import '01main';
-@import '02offer';
-@import '03about';
-@import '04trends';
-@import '05catalog';
-@import '06delivery';
-@import '07contact';
-@import '08footer';
+@import '010main';
+@import '011main.header';
+@import '012main.text';
+@import '020offer';
+@import '030about';
+@import '040trends';
+@import '050catalog';
+@import '060delivery';
+@import '070contact';
+@import '080footer';
