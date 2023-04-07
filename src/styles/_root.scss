@@ -9,18 +9,19 @@ $orange: #d26a22; //RGBA(210, 106, 34, 1);
 $darkorange: #cf5c0d;
 $white: white;
 
-@mixin vVal($prop, $size1, $size2, $val1, $val2){
+@mixin vVal($prop, $size1, $size2, $val1, $val2){ // мой первый миксин )
   $k: calc(($val1 - $val2) / ($size1 - $size2));
+  $v: calc($val1 - ($size1 - 100vw) * $k);
   @if $prop == "left" {
-    left: calc($val1 - ($size1 - 100vw) * $k);
+    left: $v;
   } @else if $prop == "right" {
-    right: calc($val1 - ($size1 - 100vw) * $k);
+    right: $v;
   } @else if $prop == "top" {
-    top: calc($val1 - ($size1 - 100vw) * $k);
+    top: $v;
   } @else if $prop == "bottom" {
-    bottom: calc($val1 - ($size1 - 100vw) * $k);
+    bottom: $v;
   } @else if $prop == "font-size" {
-    font-size: calc($val1 - ($size1 - 100vw) * $k);
+    font-size: $v;
   }  
 }
 
