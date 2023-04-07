@@ -5,7 +5,10 @@
     justify-content: space-between;
     align-items: center;
     gap: 30px;
+    position: relative;
+    z-index: 1;
   }
+
   &__text{
     padding-top: 2rem;
   }
@@ -17,9 +20,15 @@
   &__link{
     margin-top: 4.5rem;
   }
+
+  // =======Plate================
+  &__imagemob{
+    display: none;
+  }
   &__cover{
     flex-basis: 758px;
     height: 758px;
+        
     border: 1px solid rgba($green,0.4);
     border-radius: 50%;
     display: flex;
@@ -96,7 +105,92 @@
       }
     }
   }
-
+  @media (max-width: 1440px){
+    &__cover{
+      flex-basis: 52vw;
+      height: 52vw;
+    }
+    &__line{
+      width: 45vw; 
+      height: 45vw; 
+    }
+    &__btn{
+      &_1{
+        top: calc(96px - (1440px - 100vw)*(0.17));
+      }
+      &_2{
+         top: calc(139px - (1440px - 100vw)*(0.225));
+      }
+      &_3{
+        bottom: calc(-36px - (1440px - 100vw)*(0.04));
+      }
+    }
+  }
+  @media (max-width: 1200px){
+    &__flex{
+    }
+    &__item{
+      margin-left: 0;
+    }    
+    &__cover{
+      border: none;
+    }
+    &__btn{
+      &_1{
+        top: calc(119px - (1200px - 100vw)*0.21);
+      }
+      &_2{
+        top: calc(85px - (1200px - 100vw)*(0.18));
+      }
+      &_3{
+        bottom: calc(-6px - (1200px - 100vw)*.04);
+      }
+    }
+  }
+  @media (max-width: 1024px){
+    &__flex{
+      align-items: start;
+      gap: 15;
+    }
+    &__line{
+      border: none;
+      width: 100%;
+    }
+    &__image{
+      width: 100%;
+    }
+    &__item{
+      margin-left: 0;
+    }    
+    &__cover{
+      border: none;
+    }
+  }
+  @media (max-width: 900px){
+    &__btn{
+      display: none;
+    }
+  }
+  @media (max-width: 768px){
+    &__text{
+      flex-basis: 100%;
+      text-align: center;
+    }
+    &__item{
+      max-width: 100%;
+    }
+    &__imagemob{
+      display: block;
+      max-width: 300px;
+      margin: 0 auto;
+      margin-top: 3rem;
+      animation: shadowGo 5s infinite ease-in-out;
+      border-radius: 50%;
+    }
+      &__cover{
+      display: none;
+    }
+  }
 }
 
 // @keyframes shadowGo {

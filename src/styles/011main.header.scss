@@ -84,7 +84,7 @@ $rd_480: 480px;
   }
 
   // ================ medias
-  @media (max-width: $rd_1280){
+  @media (max-width: 1280px){
     gap:3%;
 
     &__navigation{
@@ -94,7 +94,7 @@ $rd_480: 480px;
       justify-content: end;
     }
   }
-  @media (max-width: $rd_1170){
+  @media (max-width: 1170px){
     gap:2.5%;
     
 
@@ -118,8 +118,11 @@ $rd_480: 480px;
         background-color: $green;
       }
     }
+    // &__avocado{
+    //   display: none;
+    // }
   }
-  @media (max-width: $rd_900){
+  @media (max-width: 900px){
     gap:2.2rem;
 
     &__nav{
@@ -193,65 +196,6 @@ $rd_480: 480px;
     }
   }
 
-  @media (max-width: 1px){
-  }
-  // @media (max-width: $rd_1150){
-  //   &__nav{
-  //     justify-content: space-between;
-  //     gap: unset;
-  //   }
-  // }
-
-  @media (max-width: 16px) {
-    gap:1.1rem;
-
-    &__nav{
-      
-    }
-    &__tel{
-      font-size: 0;
-      // display: block;
-      flex-basis: auto;
-      width: 4rem; height: 4rem;
-      border-radius: 50%;
-      background-color: transparent;
-      background-image: url(../images/h-phone.svg);
-      background-size: 1.7rem 1.5rem;
-      background-position: center center;
-      background-repeat: no-repeat;
-      position: relative;
-      border: 1px solid $green;
-      &:hover{
-        border: 1px solid $green;
-      }
-    }
-    &__menu{
-      display: block;
-      flex-basis: auto;
-      width: 4rem; height: 4rem;
-      border-radius: 50%;
-      background-color: transparent;
-      background-image: url(../images/h-menu.svg);
-      background-size: 1.7rem 1.5rem;
-      background-position: center center;
-      background-repeat: no-repeat;
-      border: 1px solid $green;
-      &:hover{
-        border: 1px solid $green;
-      }
-    }
-    &__cart{
-      flex-basis: auto;
-      width: 4rem; height: 4rem;
-      background-color: transparent;
-      background-image: url(../images/h-cart.svg);
-      border: 1px solid $green;
-      &:hover{
-        border: 1px solid $green;
-        background-color: transparent;
-      }
-      }
-  }
 } // .header 
 
 

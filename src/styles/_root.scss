@@ -30,12 +30,15 @@ body{
   max-width: 1440px;
   padding-left: 15px;
   padding-right: 15px;
+  @media (max-width: 768px){
+    max-width: 600px;
+  }
 }
 
 .title{
   font-family: $font-corm;
   font-weight: 700;
-  font-size: 8rem;
+  font-size: 7.8rem;
   margin: 0;
   &__span{
     font-style: italic;
@@ -45,6 +48,9 @@ body{
       display:block;
       margin-top: -13px;
     }
+  }
+  @media (max-width: 1200px){
+    font-size: 7rem;
   }
 }
 
@@ -58,6 +64,17 @@ body{
     font-size: 2.4rem;
     letter-spacing: 1px;
   }
+
+  @media (max-width: 1200px){
+    font-size: 1.6rem;
+    &_size-m{
+      font-size: 2.2rem;
+    }
+  }
+  @media (max-width: 768px){
+    text-align: center;
+  }
+
 }
 
 a, a::before{

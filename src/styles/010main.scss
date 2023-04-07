@@ -60,6 +60,43 @@
     right: 6%;
     width: 110px;
   }
+  @media (max-width: 1730px){
+    &__pepper{
+      top: 12%;
+    }
+  }
+  @media (max-width: 1200px){
+    &__beans{
+      bottom: 1%;
+    }
+  }
+  @media (max-width: 1170px){
+    &__avocado{
+      display: none;
+    }
+  }
+  @media (max-width: 768px){
+    &__tomato{
+      top: 12%;
+      left: -32px;
+    }
+    &__pepper{
+      top: 43%;
+    }
+    &__beans{
+      display: none;
+    }
+    &__avocado{
+      display: block;
+      top: 12%;
+      right: -102px;
+    }
+    &__cucumber{
+      top: 70%;
+      right: 0;
+      transform:rotate(90deg);
+    }
+  }
 }
 
 .link{
