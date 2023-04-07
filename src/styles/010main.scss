@@ -1,23 +1,4 @@
 // this 01main.scss imported in _root.scss
-
-.logo {
-  display: block;
-  flex-basis: 12rem;
-  height: 3.2rem;
-  background-image: url(../images/logo.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-
-  &_h{
-    width: 17.9rem;
-    height: 4.8rem;
-  }
-  @media (max-width: 320px){
-    flex-basis: 9.6rem;
-    height: 2.5rem;
-  }  
-}
-
 .main {
   position: relative;
   padding-bottom: 169px;
@@ -34,11 +15,27 @@
     width: 85px;    
     z-index: -1;
   }
+  &__cucumber2 {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;    
+    z-index: -1;
+  }
   &__avocado {
     position: absolute;
     top: 56px;
     right: 0;
     width: 194px;
+    z-index: -1;
+  }
+  &__avocado2{
+    position: absolute;
+    display: none;
+    top: 56px;
+    right: 0;
+    width: 94px;
     z-index: -1;
   }
   &__pepper {
@@ -87,40 +84,33 @@
       display: none;
     }
     &__avocado{
-      display: block;
+      display: none;
       top: 12%;
       right: -102px;
     }
-    &__cucumber{
-      top: 70%;
+    &__avocado2{
+      display: block;
+      top: 110px;
+      left: initial;
       right: 0;
-      transform:rotate(90deg);
+      width: 94px;
+      // z-index: -1;
+    }
+  
+    &__cucumber{
+      display: none;
+    }
+    &__cucumber2 {
+      display: block;
+      top: 700px;
+      right: 0;
+      width: 45px;    
+      z-index: -1;
     }
   }
-}
+  @media (max-width: 440px){ // здоровая еда не помещается
 
-.link{
-  color:$white;
-  letter-spacing: .13rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 2.5rem 4.2rem;
-  box-shadow: 0px 1rem 1.1rem .2rem rgba(207,92,13,0.2);
-  border-radius: 3.8rem;
-  border: none;
-  display: inline-block;
-  cursor: pointer;
-
-  background-color: $orange;
-  // border: 3px solid transparent;
-  &:hover{
-    background-color: $darkorange; 
-    // border: 3px solid black;
-  }
-  &_s{
-    font-size: 14px;
-    padding: 2.1rem 3.5rem;
-    border-radius: calc(7px + 2.1rem);
   }
 }
+
 

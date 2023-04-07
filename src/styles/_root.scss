@@ -9,8 +9,111 @@ $orange: #d26a22; //RGBA(210, 106, 34, 1);
 $darkorange: #cf5c0d;
 $white: white;
 
+@mixin vVal($prop, $size1, $size2, $val1, $val2){
+  $k: calc(($val1 - $val2) / ($size1 - $size2));
+  @if $prop == "left" {
+    left: calc($val1 - ($size1 - 100vw) * $k);
+  } @else if $prop == "right" {
+    right: calc($val1 - ($size1 - 100vw) * $k);
+  } @else if $prop == "top" {
+    top: calc($val1 - ($size1 - 100vw) * $k);
+  } @else if $prop == "bottom" {
+    bottom: calc($val1 - ($size1 - 100vw) * $k);
+  } @else if $prop == "font-size" {
+    font-size: calc($val1 - ($size1 - 100vw) * $k);
+  }  
+}
+
+.test{
+  height: 400px;
+  background-color: cadetblue;
+  position: relative;
+  &__itemx1{
+    width: 1px;
+    height: 90%;
+    background-color: gold;
+    position: absolute;
+    top: 5%;
+    left: 50px;
+  }
+  &__itemx2{
+    width: 1px;
+    height: 90%;
+    background-color: gold;
+    position: absolute;
+    top: 5%;
+    left: 150px;
+  }
+  &__itemx3{
+    width: 1px;
+    height: 90%;
+    background-color: gold;
+    position: absolute;
+    top: 5%;
+    right: 50px;
+  }
+  &__itemx4{
+    width: 1px;
+    height: 90%;
+    background-color: gold;
+    position: absolute;
+    top: 5%;
+    right: 150px;
+  }
+  &__itemx{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(21, 231, 38);
+    position: absolute;
+    top: 50%;
+    @include vVal(right, 1400px, 1000px, 50px, 150px);
+  }
+
+  &__item1{
+    width: 90%;
+    height: 1px;
+    background-color: gold;
+    position: absolute;
+    left: 5%;
+    top: 50px;
+  }
+  &__item2{
+    width: 90%;
+    height: 1px;
+    background-color: gold;
+    position: absolute;
+    left: 5%;
+    top: 150px;
+  }
+  &__item3{
+    width: 90%;
+    height: 1px;
+    background-color: gold;
+    position: absolute;
+    left: 5%;
+    bottom: 50px;
+  }
+  &__item4{
+    width: 90%;
+    height: 1px;
+    background-color: gold;
+    position: absolute;
+    left: 5%;
+    bottom: 150px;
+  }
+  &__item{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(21, 231, 38);
+    position: absolute;
+    left: 50%;
+    @include vVal(bottom, 1400px, 1000px, 50px, 150px);
+  }
+}
+
 html{
   font-size: 10px;
+  // overflow-x: hidden;
 }
 body{
   font-size: 1.6rem;
@@ -19,12 +122,14 @@ body{
   background-image: url(../images/bg/general.jpg);
   background-repeat: no-repeat;
   background-size: cover;  
+  // overflow-x: hidden;
 }
 .listClr{
   list-style-type: none;
   margin: 0;
   padding-left: 0;
 }
+
 .container{
   margin: 0 auto;
   max-width: 1440px;
@@ -32,6 +137,49 @@ body{
   padding-right: 15px;
   @media (max-width: 768px){
     max-width: 600px;
+  }
+}
+
+.logo {
+  display: block;
+  flex-basis: 12rem;
+  height: 3.2rem;
+  background-image: url(../images/logo.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &_h{
+    width: 17.9rem;
+    height: 4.8rem;
+  }
+  @media (max-width: 320px){
+    flex-basis: 9.6rem;
+    height: 2.5rem;
+  }  
+}
+
+.link{
+  color:$white;
+  letter-spacing: .13rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 2.5rem 4.2rem;
+  box-shadow: 0px 1rem 1.1rem .2rem rgba(207,92,13,0.2);
+  border-radius: 3.8rem;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+
+  background-color: $orange;
+  // border: 3px solid transparent;
+  &:hover{
+    background-color: $darkorange; 
+    // border: 3px solid black;
+  }
+  &_s{
+    font-size: 14px;
+    padding: 2.1rem 3.5rem;
+    border-radius: calc(7px + 2.1rem);
   }
 }
 
@@ -51,6 +199,9 @@ body{
   }
   @media (max-width: 1200px){
     font-size: 7rem;
+  }
+  @media (max-width: 440px){
+    font-size: 5rem;
   }
 }
 
