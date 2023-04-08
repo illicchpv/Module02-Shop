@@ -71,23 +71,6 @@
     &__avocado{
       display: none;
     }
-  }
-  @media (max-width: 768px){
-    &__tomato{
-      top: 12%;
-      left: -32px;
-    }
-    &__pepper{
-      top: 43%;
-    }
-    &__beans{
-      display: none;
-    }
-    &__avocado{
-      display: none;
-      top: 12%;
-      right: -102px;
-    }
     &__avocado2{
       display: block;
       top: 110px;
@@ -96,16 +79,31 @@
       width: 94px;
       // z-index: -1;
     }
-  
-    &__cucumber{
-      display: none;
+  }
+  @media (max-width: 768px){
+    &__tomato{
+      top: 50px;
+      left: -32px;
+    }
+    &__pepper{
+      top: 415px;
+      z-index: 2;
+    }
+    &__avocado2{
+      top: 60px;
     }
     &__cucumber2 {
       display: block;
-      top: 700px;
+      top: 670px;
       right: 0;
       width: 45px;    
       z-index: -1;
+    }
+    &__beans{
+      display: none;
+    }
+    &__cucumber{
+      display: none;
     }
   }
   @media (max-width: 440px){ // здоровая еда не помещается

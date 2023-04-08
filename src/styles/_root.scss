@@ -11,7 +11,7 @@ $white: white;
 
 @mixin vVal($prop, $size1, $size2, $val1, $val2){ // мой первый миксин )
   $k: calc(($val1 - $val2) / ($size1 - $size2));
-  $v: calc($val1 - ($size1 - 100vw) * $k);
+  $v: calc($val1 - (($size1 - 100vw) * $k)); // 
   @if $prop == "left" {
     left: $v;
   } @else if $prop == "right" {
@@ -100,7 +100,8 @@ $white: white;
     background-color: gold;
     position: absolute;
     left: 5%;
-    bottom: 150px;
+    //bottom: 150px;
+    top:96px;
   }
   &__item{
     width: 50px;
@@ -108,10 +109,11 @@ $white: white;
     background-color: rgb(21, 231, 38);
     position: absolute;
     left: 50%;
-    @include vVal(bottom, 1400px, 1000px, 50px, 150px);
+    //@include vVal(bottom, 1400px, 1000px, 50px, 150px);
+    @include vVal(top, 1400px, 1201px, 96px, 57px);
   }
 }
-
+// ============================================================
 html{
   font-size: 10px;
   // overflow-x: hidden;
@@ -230,10 +232,10 @@ body{
 }
 
 a, a::before{
-  transition:all .3s;
+  transition:background-color .3s,color .3s,border .3s;
 }
 .flu{
-   transition:all .3s;
+  transition:background-color .3s,color .3s,border .3s;
 }
 
 @import '010main';

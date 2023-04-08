@@ -105,6 +105,8 @@
       }
     }
   }
+
+  // --------media----------------------
   @media (max-width: 1440px){
     &__cover{
       flex-basis: 52vw;
@@ -116,13 +118,17 @@
     }
     &__btn{
       &_1{
-        top: calc(96px - (1440px - 100vw)*(0.17));
+        //top: calc(96px - (1440px - 100vw)*(0.17));
+        @include vVal(top, 1400px, 1200px, 90px, 57px);
       }
       &_2{
-         top: calc(139px - (1440px - 100vw)*(0.225));
+        //  top: calc(139px - (1440px - 100vw)*(0.225));
+        @include vVal(top, 1400px, 1200px, 125px, 85px);
       }
       &_3{
-        bottom: calc(-36px - (1440px - 100vw)*(0.04));
+        // bottom: calc(-36px - (1440px - 100vw)*(0.04));
+        // -38px -48px -6px
+        @include vVal(bottom, 1400px, 1200px, -40px, -48px);
       }
     }
   }
@@ -137,17 +143,31 @@
     }
     &__btn{
       &_1{
-        top: calc(119px - (1200px - 100vw)*0.21);
+        @include vVal(top, 1200px, 1024px, 118px, 83px);
       }
       &_2{
-        top: calc(85px - (1200px - 100vw)*(0.18));
+        @include vVal(top, 1200px, 1024px, 85px, 54px);
       }
       &_3{
-        bottom: calc(-6px - (1200px - 100vw)*.04);
+        @include vVal(bottom, 1200px, 1024px, -6px, -14px);
       }
     }
   }
   @media (max-width: 1024px){
+    &__btn{
+      &_1{
+        @include vVal(top, 1024px, 900px, 72px, 75px);
+        @include vVal(left, 1024px, 900px, 105px, 60px);
+      }
+      &_2{
+        top:40px;
+        @include vVal(right, 1024px, 900px, 107px, 75px);
+      }
+      &_3{
+        @include vVal(bottom, 1024px, 900px, 22px, 38px);
+        @include vVal(right, 1024px, 900px, 275px, 204px);
+      }
+    }
     &__flex{
       align-items: start;
       gap: 15;
