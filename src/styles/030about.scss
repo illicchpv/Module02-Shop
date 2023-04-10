@@ -12,7 +12,7 @@
     align-items:flex-end;
   }
   &__text{
-    padding-left: 112px;
+    // margin-left: 112px; // отступ подзаголовка
     max-width: 600px;
     font-family: $font-jost;
     font-size: 1.8rem;
@@ -55,4 +55,29 @@
       background-image: url(../images/about3.svg);
       background-size: 45px 39px;    }
   }
+
+  // -------------- media --------------
+  @media (max-width: 1200px){
+    // &__text{
+    //   margin-left: 0px; // отступ подзаголовка
+    // }
+  }
+  @media (max-width: 768px){
+    &-title_lineH{
+      text-align: center;
+    }
+    &__box{
+      display: flex;
+      flex-direction: column;
+      // justify-content: space-between;
+      align-items:center;
+    }
+    &__text{
+      text-align: center;
+    }
+    &__list {
+      margin-top: 120px;
+    }     
+  }
+
 }

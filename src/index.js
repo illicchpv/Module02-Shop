@@ -26,7 +26,7 @@ var swiper = new Swiper(".offerSwiper", {
   slidesPerView: 3,
   spaceBetween: 20,
   slidesPerGroup: 3,
-  loop: true,
+  loop: false,
   loopFillGroupWithBlank: true,
   pagination: {
     el: ".swiper-pagination",
@@ -37,6 +37,26 @@ var swiper = new Swiper(".offerSwiper", {
     prevEl: ".swiper-button-prev",
   },
   modules: [Navigation, Pagination],
+  breakpoints: {
+    10:{
+      slidesPerView: 1,
+      sligesPerGroup: 1
+    },
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      sligesPerGroup: 1
+    },
+    768: {
+      slidesPerView: 2,
+      sligesPerGroup: 2
+    },
+    1024: {
+      slidesPerView: 3,
+      sligesPerGroup: 3
+    },
+  }
+
 });
 
 var swiper = new Swiper(".trendsSwiper", {

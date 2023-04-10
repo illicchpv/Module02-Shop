@@ -5,7 +5,7 @@
   
   &__box{
     margin-top: 71px;
-    margin-left: 125px;
+    // margin-left: 125px; // отступ подзаголовка
 
     display: flex;
     justify-content: space-between;
@@ -96,5 +96,26 @@
       opacity: 1;
       transform: scale(1.07);
     }
+  }
+
+  // -------------- media --------------
+  @media (max-width: 1200px){
+    // &__box{
+    //   margin-left: 0; // отступ подзаголовка
+    // }
+  }
+  @media (max-width: 768px){
+    &__description{
+      text-align: center;
+    }
+    .delivery__box {
+      margin-top: 71px;
+      display: flex;
+      flex-direction: column;
+    }
+    .delivery__list {
+      margin: 0 auto;
+      margin-top: 20px;
+  }    
   }
 }

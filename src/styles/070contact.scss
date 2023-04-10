@@ -11,7 +11,7 @@
       max-width: 400px;
       flex-grow: 1;
       margin-top: 4rem;
-      margin-left: 12rem;
+      //margin-left: 12rem; // отступ подзаголовка
     }
     &__list{
       padding-left: 0;
@@ -80,77 +80,57 @@
       flex-basis: 589px;
     }
   }
-}
 
-.card{
-  border: 2px solid rgba($green, .4);
-  padding: 3.2rem 5.8rem 4rem;
-  border-radius: 2rem;
+  // -------------- media --------------
+  @media (max-width: 1200px){
+    // &-box{
+    //   &__text{
+    //     margin-left: 0; // отступ подзаголовка
+    //   }
+    // }
+  }
+  @media (max-width: 768px){
+    &-box{
+      flex-direction: column;
+      align-items: normal;
 
-  &__title{
-    font-size: 30px;
-    font-family: $font-corm;
-    margin-top: 0;
-  }
-  &__label{
-    font-size: 12px;
-    margin-bottom: 1rem;
-    display: block;
-    margin-left: .6rem;
-  }
-  &__input{
-    font-size: 16px;
-    border: 1px solid rgba($green, .4);
-    border-radius: 2rem;
-    margin-bottom: 2.8rem;
-    display: block;
-    padding: 2.2rem 3rem;
-    margin-bottom: 2.7rem;
-    width: 100%;
-    box-sizing: border-box;
-    &:focus{
-      border: 1px solid rgba($green, 1);
-      outline: none;
+      &__title{
+        text-align: center;
+      }
+      &__text{
+        max-width: none;
+        text-align: center;
+      }      
+      &__list {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      &__link{
+        font-size: 12px;
+      }
+      .contact-box__form {
+        margin-top: 20px;
+      }      
     }
-    &:invalid{
-      border: 1px solid rgba(red, 1);
-    }
-  }
-  &__check{
-    font-size: 1.2rem;
-    color:rgba($green, .6);
-    line-height: 1.5;
-    max-width: 360px;
-    margin-top: 1.6rem;
-    margin-bottom: 0;
-  }
-  &__link{
-    margin-top: 1.2rem;
-    padding-left: 5.5rem;
-    cursor: pointer;
-    background-color: $orange;
-    &:hover{
-      background-color: $darkorange; 
+
+    &__text-block{
+      text-align: center;
     }
   }
-  &__docs{
-    color:rgba($green, .6);
-    text-decoration: none;
-    border-bottom: 1px solid #ecedec;
-  }
+
 }
 
-@keyframes dzin {
-  0% { 
-    transform: rotate(0deg);
-    transform: translateX(0);
-  }
-  50% { 
-    transform: rotate(10deg);
-    transform: translateX(10px);
-  }
-  0% { 
-    transform: rotate(0deg);
-    transform: translateX(0);
-  }
-}
+// @keyframes dzin {
+//   0% { 
+//     transform: rotate(0deg);
+//     transform: translateX(0);
+//   }
+//   50% { 
+//     transform: rotate(10deg);
+//     transform: translateX(10px);
+//   }
+//   0% { 
+//     transform: rotate(0deg);
+//     transform: translateX(0);
+//   }
+// }

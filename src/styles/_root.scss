@@ -20,8 +20,25 @@ $white: white;
     top: $v;
   } @else if $prop == "bottom" {
     bottom: $v;
+  } @else if $prop == "width" {
+    width: $v;
+  } @else if $prop == "height" {
+    height: $v;
   } @else if $prop == "font-size" {
     font-size: $v;
+  }  @else if $prop == "margin-left" {
+    margin-left: $v;
+  }  
+}
+@mixin v2Val($prop, $size1, $size2, $val1, $val21, $val2, $val22){ // мой 2 миксин )
+  $k: calc(($val1 - $val2) / ($size1 - $size2));
+  $v: calc($val1 - (($size1 - 100vw) * $k)); // 
+  $k2: calc(($val21 - $val22) / ($size1 - $size2));
+  $v2: calc($val21 - (($size1 - 100vw) * $k2)); // 
+  @if $prop == "padding" {
+    padding: $v $v2;
+  }  @else if $prop == "margin" {
+    margin: $v $v2;
   }  
 }
 
@@ -179,10 +196,53 @@ body{
     background-color: $darkorange; 
     // border: 3px solid black;
   }
-  &_s{
+  &_new{ // тренд
+    font-size: 16px;
+    padding: 2.6rem 5.2rem;
+    border-radius: calc(8px + 2.6rem);
+  }
+  &_s{ // каталог
     font-size: 14px;
     padding: 2.1rem 3.5rem;
     border-radius: calc(7px + 2.1rem);
+  }
+  &_frm{ // форма
+    font-size: 16px;
+    padding: 2.6rem 4.9rem;
+    border-radius: calc(7px + 2.1rem);
+  }
+
+  @media (max-width: 1440px){
+    @include vVal(font-size, 1440px, 320px, 16px, 12px);
+    @include v2Val(padding, 1440px, 320px, 24px, 43px, 16px, 27px);
+    &_new{
+      @include vVal(font-size, 1440px, 900px, 16px, 10px);
+      @include v2Val(padding, 1440px, 900px, 26px, 52px, 15px, 30px);
+    }
+    &_s{
+      @include vVal(font-size, 1440px, 900px, 14px, 10px);
+      @include v2Val(padding, 1440px, 900px, 22px, 35px, 15px, 33px);
+    }
+    &_frm{
+      @include vVal(font-size, 1440px, 900px, 16px, 12px);
+      @include v2Val(padding, 1440px, 900px, 26px, 49px, 17px, 30px);
+    }
+  }
+  @media (max-width: 320px){
+    font-size: 12px;
+    padding: 16px 27px;
+    &_new{
+      font-size: 10px;
+      padding: 15px 30px;
+    }
+    &_s{
+      font-size: 10px;
+      padding: 15px 33px;
+    }
+    &_frm{
+      font-size: 12px;
+      padding: 17px 30px;
+    }
   }
 }
 
@@ -200,11 +260,24 @@ body{
       margin-top: -13px;
     }
   }
-  @media (max-width: 1200px){
-    font-size: 7rem;
+  @media (max-width: 1440px){
+    @include vVal(font-size, 1440px, 320px, 80px, 30px);
   }
-  @media (max-width: 440px){
-    font-size: 5rem;
+  // @media (max-width: 1200px){
+  //   font-size: 7rem;
+  // }
+  // @media (max-width: 440px){
+  //   font-size: 5rem;
+  // }
+}
+
+.subtitLeftShift{
+  margin-left: 125px;
+  @media (max-width: 1440px){
+    @include vVal(margin-left, 1440px, 1024px, 125px, 0px);
+  }
+  @media (max-width: 1024px){
+    margin-left: 0;
   }
 }
 
@@ -219,16 +292,76 @@ body{
     letter-spacing: 1px;
   }
 
-  @media (max-width: 1200px){
-    font-size: 1.6rem;
-    &_size-m{
-      font-size: 2.2rem;
+  @media (max-width: 1440px){
+    @include vVal(font-size, 1440px, 320px, 18px, 12px);
+  }
+  // @media (max-width: 1200px){
+  //   font-size: 1.6rem;
+  //   &_size-m{
+  //     font-size: 2.2rem;
+  //   }
+  // }
+  // @media (max-width: 768px){
+  //   text-align: center;
+  // }
+}
+
+.card{
+  border: 2px solid rgba($green, .4);
+  padding: 3.2rem 5.8rem 4rem;
+  border-radius: 2rem;
+
+  &__title{
+    font-size: 30px;
+    font-family: $font-corm;
+    margin-top: 0;
+  }
+  &__label{
+    font-size: 12px;
+    margin-bottom: 1rem;
+    display: block;
+    margin-left: .6rem;
+  }
+  &__input{
+    font-size: 16px;
+    border: 1px solid rgba($green, .4);
+    border-radius: 2rem;
+    margin-bottom: 2.8rem;
+    display: block;
+    padding: 2.2rem 3rem;
+    margin-bottom: 2.7rem;
+    width: 100%;
+    box-sizing: border-box;
+    &:focus{
+      border: 1px solid rgba($green, 1);
+      outline: none;
+    }
+    &:invalid{
+      border: 1px solid rgba(red, 1);
     }
   }
-  @media (max-width: 768px){
-    text-align: center;
+  &__check{
+    font-size: 1.2rem;
+    color:rgba($green, .6);
+    line-height: 1.5;
+    max-width: 360px;
+    margin-top: 1.6rem;
+    margin-bottom: 0;
   }
-
+  &__link{
+    margin-top: 1.2rem;
+    padding-left: 5.5rem;
+    cursor: pointer;
+    background-color: $orange;
+    &:hover{
+      background-color: $darkorange; 
+    }
+  }
+  &__docs{
+    color:rgba($green, .6);
+    text-decoration: none;
+    border-bottom: 1px solid #ecedec;
+  }
 }
 
 a, a::before{
