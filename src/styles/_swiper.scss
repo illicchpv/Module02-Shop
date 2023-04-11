@@ -1,0 +1,62 @@
+// .swiper-
+.swiper{
+  
+  &-slide{
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 20px;
+  }
+  &-pagination{
+    display: none;
+    @media (max-width: 768px){
+      display: block;
+    }
+  }
+  &-button-next, &-button-prev{
+    top: -30px;
+    font-weight: 900;
+
+    @media (max-width: 768px){
+      display: none;
+    }    
+    &:hover{
+      &::after{
+        color: rgba($green, 1);
+      }
+    }
+    &::after{
+      color: rgba($green, 0.4);
+      font-size: 20px;
+    }
+  }
+  &-button-next{
+    right: -8px;
+  }  
+  &-button-prev{
+    left: initial;
+    right: 72px;
+  }
+
+}
+.swiper-pagination-bullet{
+  width: 8px;
+  height: 8px;
+}
+.swiper-pagination-bullet-active{
+  background-color: $orange;
+  border: 1px solid $orange;
+}
+@media (max-width: 768px){
+  .offer__slider{
+    padding-bottom: 30px;
+  }
+  .trends__slider{ 
+    padding-bottom: 30px;
+  }  
+  .swiper-horizontal>.swiper-pagination-bullets{
+    bottom: -30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
