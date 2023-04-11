@@ -22,7 +22,7 @@ import Swiper, { Navigation, Pagination } from 'swiper';
 //   ...
 // });
 
-var swiper = new Swiper(".offerSwiper", {
+var newsSwiper = new Swiper(".newsSwiper", {
   slidesPerView: 3,
   spaceBetween: 20,
   slidesPerGroup: 3,
@@ -40,26 +40,63 @@ var swiper = new Swiper(".offerSwiper", {
   breakpoints: {
     10:{
       slidesPerView: 1,
-      sligesPerGroup: 1
+      slidesPerGroup: 1
     },
     // when window width is >= 320px
     320: {
       slidesPerView: 1,
-      sligesPerGroup: 1
+      slidesPerGroup: 1
     },
     768: {
       slidesPerView: 2,
-      sligesPerGroup: 2
+      slidesPerGroup: 2
     },
     1024: {
       slidesPerView: 3,
-      sligesPerGroup: 3
+      slidesPerGroup: 3
     },
   }
 
 });
 
-var swiper = new Swiper(".trendsSwiper", {
+var offerSwiper = new Swiper(".offerSwiper", {
+  slidesPerView: 3,
+  spaceBetween: 20,
+  slidesPerGroup: 3,
+  loop: false,
+  loopFillGroupWithBlank: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  modules: [Navigation, Pagination],
+  breakpoints: {
+    10:{
+      slidesPerView: 1,
+      slidesPerGroup: 1
+    },
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      slidesPerGroup: 1
+    },
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 2
+    },
+    1024: {
+      slidesPerView: 3,
+      slidesPerGroup: 3
+    },
+  }
+
+});
+
+var trendsSwiper = new Swiper(".trendsSwiper", {
   slidesPerView: 3,
   spaceBetween: 20,
   slidesPerGroup: 3,
@@ -78,4 +115,23 @@ var swiper = new Swiper(".trendsSwiper", {
     prevEl: ".swiper-button-prev",
   },
   modules: [Navigation, Pagination],
+  breakpoints: {
+    10:{
+      slidesPerView: 1,
+      slidesPerGroup: 1
+    },
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      slidesPerGroup: 1
+    },
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 2
+    },
+    1024: {
+      slidesPerView: 3,
+      slidesPerGroup: 3
+    },
+  }
 });

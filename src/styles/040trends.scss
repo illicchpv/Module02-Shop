@@ -10,8 +10,17 @@
   // swiper in offer
   &__slider{
     overflow: hidden;
-    padding-top: 48px;
+    padding-top: 95px;
+    // background-color: green;
+
+    @media (max-width: 1440px){
+      @include vVal(padding-top, 1400px, 320px, 88px, 45px);
+    }
+    @media (max-width: 320px){
+      padding-top: 45px;
+    }
   }
+
   .swiper{
     overflow: initial;
     &-slide{
@@ -23,8 +32,17 @@
       flex-direction: column;
       align-items: center;
       justify-content: flex-end;
+
+      @media (max-width: 1440px){
+        @include vVal(height, 1400px, 320px, 686px, 302px);
+      }
+      @media (max-width: 320px){
+        height: 302px;
+      }
+
       &__img{
         max-height: 300px;
+        max-width: 70%;
         object-fit: contain;
         flex-grow: 1;
       }

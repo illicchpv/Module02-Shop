@@ -1,3 +1,5 @@
+
+///////////////////////////////////////////////////
 // this 02offer.scss imported in _root.scss
 .offer{
   padding-top: 2rem;
@@ -14,12 +16,20 @@
   &__slider{
     overflow: hidden;
     padding-top: 95px;
+    // background-color: red;
+
+    @media (max-width: 1440px){
+      @include vVal(padding-top, 1400px, 320px, 95px, 41px);
+    }
     @media (max-width: 768px){
       max-width: 450px;
       margin: 0 auto;
     }
-  
+    @media (max-width: 320px){
+      padding-top: 41px;
+    }
   }
+  
   .swiper{
     overflow: initial;
     &-slide{
@@ -44,6 +54,10 @@
         max-width: 270px;
         position: absolute;
         bottom: 36px;
+
+        @media (max-width: 768px){
+          // text-align: center;
+        }
       }
       &__text{
         display: none;
@@ -156,8 +170,8 @@
     }
   }
   &-button-next, &-button-prev{
-    top:-60px;
-    // right: 0px;
+    top: -30px;
+    font-weight: 900;
 
     @media (max-width: 768px){
       display: none;
