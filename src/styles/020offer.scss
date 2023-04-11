@@ -5,9 +5,6 @@
   padding-top: 2rem;
   padding-bottom: 16.8rem;
 
-  &__text-block{
-
-  }
   &__text{
     margin-top: 5.3rem;
     max-width: 700px;
@@ -21,6 +18,10 @@
     @media (max-width: 1440px){
       @include vVal(padding-top, 1400px, 320px, 95px, 41px);
     }
+    @media (max-width: 1024px){
+      // max-width: 75%;
+      // margin: 0 auto;
+    }
     @media (max-width: 768px){
       max-width: 450px;
       margin: 0 auto;
@@ -32,124 +33,6 @@
   
   .swiper{
     overflow: initial;
-    &-slide{
-      height: 521px;
-      padding: 213px 0 40px 42px;
-      background-repeat: no-repeat;
-      background-size: cover;
-
-      @media (max-width: 1440px){
-        @include vVal(height, 1440px, 1024px, 521px, 469px);
-        // height: 469px;
-      }
-      @media (max-width: 1024px){
-        height: 469px;
-      }
-
-      &__title{
-        font-family: $font-corm;
-        font-weight: 700;
-        font-size: 3rem;
-        margin: 0;
-        // max-width: 270px;
-        position: absolute;
-        bottom: 36px;
-        left: 0;
-        width: 100%;
-        @media (max-width: 768px){
-          text-align: center;
-        }
-      }
-      &__text{
-        display: none;
-        font-family: $font-jost;
-        font-size: 1.6rem;
-        font-weight: 400;
-        opacity: 0.70;
-        max-width: 270px;
-        margin-top: 0px;
-        line-height: 1.5;
-      }
-      &__link{
-        display: none;
-        margin-top: 26px;
-        margin-left: -4px;
-        text-decoration: none;
-        color: $green;
-        font-family: $font-jost;
-        font-size: 1.6rem;
-        font-weight: 500;
-        opacity: 0.8;
-        padding-left: 52px;
-        position: relative;
-        letter-spacing: .13rem;
-        text-transform: uppercase;
-
-        @media (max-width: 768px){
-          // display: block;
-          // text-align: center;
-        }
-
-        &::before{
-          content: '';
-          position: absolute;
-          left: 0; top: -6px;
-          width: 31px;
-          height: 31px;
-          background-image: url(../images/plus.svg);
-          background-size: cover;
-          background-repeat: no-repeat;
-          opacity: .8;
-        }
-        &:hover{
-          opacity: 1;
-
-          &::before{
-            opacity: 1;
-          }
-        }
-      }
-      //???
-      &:hover{
-        .swiper-slide__title{
-          position: static;
-        }
-        .swiper-slide__text{
-          display: block;
-        }     
-        .swiper-slide__link{
-          display: inline-block;
-        }
-      }
-      &::after{
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 1;
-        box-sizing: border-box;
-        border: 1px solid rgba($green, 0.3) ;
-        background-repeat: no-repeat;
-        background-size: contain;
-        border-radius: 20px;
-        z-index: -1;
-      }
-      &:hover::after{
-        opacity: 0.5;
-        border: 3px solid rgba($green, 0.3) ;
-      }
-      &_milk::after{
-        background-image: url(../images/x_milk.png);
-      }
-      &_pasta::after{
-        background-image: url(../images/x_pasta.png);
-      }
-      &_meat::after{
-        background-image: url(../images/x_meat.png);
-      }
-    }
   }
 
   // -------------- media --------------
