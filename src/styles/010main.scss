@@ -4,6 +4,10 @@
   padding-bottom: 169px;
   z-index: 0;
 
+  @media (max-width: 768px){
+    padding-bottom: 61px;
+  }
+
   &__food{
     display: block;
     color: rgba($green, 0.8);
