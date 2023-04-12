@@ -22,43 +22,6 @@ import Swiper, { Navigation, Pagination } from 'swiper';
 //   ...
 // });
 
-var newsSwiper = new Swiper(".newsSwiper", {
-  slidesPerView: 3,
-  spaceBetween: 20,
-  slidesPerGroup: 3,
-  loop: false,
-  loopFillGroupWithBlank: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  modules: [Navigation, Pagination],
-  breakpoints: {
-    10:{
-      slidesPerView: 1,
-      slidesPerGroup: 1
-    },
-    // when window width is >= 320px
-    320: {
-      slidesPerView: 1,
-      slidesPerGroup: 1
-    },
-    768: {
-      slidesPerView: 2,
-      slidesPerGroup: 2
-    },
-    1024: {
-      slidesPerView: 3,
-      slidesPerGroup: 3
-    },
-  }
-
-});
-
 var offerSwiper = new Swiper(".offerSwiper", {
   slidesPerView: 3,
   spaceBetween: 20,
@@ -135,3 +98,7 @@ var trendsSwiper = new Swiper(".trendsSwiper", {
     },
   }
 });
+
+function doTest(){
+  console.log("offerSwiper:", offerSwiper)
+}
