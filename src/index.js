@@ -98,7 +98,8 @@ var trendsSwiper = new Swiper(".trendsSwiper", {
     },
   }
 });
+console.log("1 offerSwiper:", offerSwiper)
 
 function doTest(){
-  console.log("offerSwiper:", offerSwiper)
+  console.log("2 offerSwiper:", offerSwiper)
 }
