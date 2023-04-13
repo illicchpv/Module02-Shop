@@ -42,6 +42,8 @@ $white: white;
     padding-right: $v;
   }  @else if $prop == "padding-top" {
     padding-top: $v;
+  }  @else if $prop == "gap" {
+    gap: $v;
   }  
 }
 @mixin v2Val($prop, $size1, $size2, $val1, $val21, $val2, $val22){ // мой 2 миксин )

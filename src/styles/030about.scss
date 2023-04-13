@@ -3,7 +3,7 @@
   color: $green;
   
   &-title_lineH{
-    line-height: 86px;
+    line-height: 1.2;
   }
   &__box{
     margin-top: 93px;
@@ -31,6 +31,17 @@
     width: 110px;
     text-align: center;
     position: relative;
+    // background-color: red;
+
+    @media (max-width: 768px){
+      @include vVal(font-size, 768px, 320px, 30px, 14px);
+      @include vVal(width, 768px, 320px, 110px, 60px);
+    }
+    @media (max-width: 320px){
+      font-size: 14px;
+      width: 60px;
+    }
+
     &::after{
       content: '';
         border-radius: 50%;
@@ -42,6 +53,17 @@
         left: calc(50% - 44px);
         background-repeat: no-repeat;
         background-position: center;
+
+        @media (max-width: 768px){
+          @include vVal(width, 768px, 320px, 88px, 61px);
+          @include vVal(height, 768px, 320px, 88px, 61px);
+          @include vVal(top, 768px, 320px, -100px, -70px);
+          left: 3px;
+        }
+        @media (max-width: 320px){
+          font-size: 14px;
+        }
+    
     }
     &_1::after{
       background-image: url(../images/about1.svg);
@@ -57,11 +79,27 @@
   }
 
   // -------------- media --------------
-  @media (max-width: 1200px){
-    // &__text{
-    //   margin-left: 0px; // отступ подзаголовка
-    // }
+  @media (max-width: 1440px){
+    &__box{
+      @include vVal(margin-top, 1400px, 1200px, 93px, 50px);
+    }
   }
+  @media (max-width: 1200px){
+    &__box{
+      @include vVal(margin-top, 1400px, 1200px, 93px, 50px);
+      margin-top: 50px;
+      gap: 10px;
+    }
+    &__list{
+      @include vVal(gap, 1200px, 768px, 73px, 15px);
+    }
+  }
+  // @media (max-width: 1024px){
+  //   &__list{
+  //     gap: 45px;
+  //   }
+  // }
+  // gap: 45px;
   @media (max-width: 768px){
     &-title_lineH{
       text-align: center;
@@ -71,13 +109,16 @@
       flex-direction: column;
       // justify-content: space-between;
       align-items:center;
+      gap: 0px;
     }
     &__text{
       text-align: center;
     }
     &__list {
       margin-top: 120px;
+      width: calc(100% - 30px);
+      justify-content: space-between;
     }     
   }
-
+// @include vVal(padding-top, 1400px, 320px, 95px, 41px);
 }

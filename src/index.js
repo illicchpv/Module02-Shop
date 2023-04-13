@@ -43,15 +43,15 @@ var offerSwiper = new Swiper(".offerSwiper", {
       slidesPerGroup: 1
     },
     // when window width is >= 320px
-    320: {
+    321: {
       slidesPerView: 1,
       slidesPerGroup: 1
     },
-    768: {
+    769: {
       slidesPerView: 2,
       slidesPerGroup: 2
     },
-    1024: {
+    1025: {
       slidesPerView: 3,
       slidesPerGroup: 3
     },
@@ -84,15 +84,15 @@ var trendsSwiper = new Swiper(".trendsSwiper", {
       slidesPerGroup: 1
     },
     // when window width is >= 320px
-    320: {
+    321: {
       slidesPerView: 1,
       slidesPerGroup: 1
     },
-    768: {
+    769: {
       slidesPerView: 2,
       slidesPerGroup: 2
     },
-    1024: {
+    1025: {
       slidesPerView: 3,
       slidesPerGroup: 3
     },
