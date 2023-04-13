@@ -3,6 +3,10 @@
   padding-top: 19rem;
   padding-bottom: 12.8rem;
 
+  @media (max-width: 1440px){
+    @include vVal(padding-top, 1400px, 320px, 190px, 90px);
+  }
+
   &__text{
     margin-top: 34px;
     max-width: 710px;
@@ -16,6 +20,10 @@
     @media (max-width: 1440px){
       @include vVal(padding-top, 1400px, 320px, 88px, 45px);
     }
+    @media (max-width: 768px){
+      max-width: 384px;
+      margin: 0 auto;
+    }
     @media (max-width: 320px){
       padding-top: 45px;
     }
@@ -23,6 +31,7 @@
 
   .swiper{
     overflow: initial;
+
     &-slide{
       height: 686px;
       padding-left: 41px;
@@ -34,7 +43,10 @@
       justify-content: flex-end;
 
       @media (max-width: 1440px){
-        @include vVal(height, 1400px, 320px, 686px, 302px);
+        @include vVal(height, 1400px, 768px, 686px, 430px);
+      }
+      @media (max-width: 768px){
+        height: 430px;
       }
       @media (max-width: 320px){
         height: 302px;
@@ -45,6 +57,17 @@
         max-width: 70%;
         object-fit: contain;
         flex-grow: 1;
+
+        @media (max-width: 1024px){
+          max-width: 45%;
+        }
+        @media (max-width: 768px){
+          max-height: 30%;
+        }
+        @media (max-width: 420px){
+          max-height: 50%;
+        }
+        // 420    max-height: 50%;
       }
       &__title{
         font-family: $font-corm;
@@ -52,6 +75,11 @@
         font-size: 3rem;
         margin: 0;
         width: 100%;
+
+        @media (max-width: 420px){
+          font-size: 14px;
+          text-align: center;
+        }
       }
       &__description{
         font-family: $font-jost;
@@ -63,6 +91,17 @@
         line-height: 1.5;
         height: 70px;
         overflow: hidden;
+
+        @media (max-width: 1024px){
+          margin-top: 9px;
+        }
+        @media (max-width: 420px){
+          font-size: 12px;
+          height: auto;
+          margin-top: 10px;
+          margin-bottom: -5px;
+          text-align: center;
+        }
       }
       &__price{
         font-family: $font-jost;
@@ -70,14 +109,40 @@
         font-weight: 400;
         color: $green;        
         width: 100%;
+
+        @media (max-width: 420px){
+          font-size: 14px;
+          text-align: center;
+        }
       }
       &__footer{
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        min-width: 360px;
         box-sizing: border-box;
-        padding-right: 6px;        
+        padding-right: 6px;   
+
+        @media (max-width: 1200px){
+          min-width: 340px;
+          @include vVal(min-width, 1200px, 1024px, 340px, 300px);
+          margin-left: 6px;
+        }
+        @media (max-width: 420px){
+          margin-left: 0px;
+          display: block;
+          // background-color: red;
+          text-align: center;  
+        }
+        
+        // @media (max-width: 1100px){
+        //   min-width: 310px;
+        // }
+        // @media (max-width: 1050px){
+        //   min-width: 300px;
+        // }
+        // 1024 min-width: 300px;
       }
 
       // &__link{
@@ -153,9 +218,14 @@
     }
   }
 }
+
 .counter{
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 420px){
+    display: none;
+  }
   
   &__btn{
     cursor: pointer;
