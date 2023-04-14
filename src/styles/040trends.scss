@@ -11,6 +11,7 @@
     margin-top: 34px;
     max-width: 710px;
   }
+  
   // swiper in offer
   &__slider{
     overflow: hidden;
@@ -47,6 +48,9 @@
       }
       @media (max-width: 768px){
         height: 430px;
+      }
+      @media (max-width: 420px){
+        @include vVal(height, 420px, 320px, 430px, 302px);
       }
       @media (max-width: 320px){
         height: 302px;
@@ -115,6 +119,7 @@
           text-align: center;
         }
       }
+
       &__footer{
         display: flex;
         justify-content: space-between;
@@ -132,63 +137,10 @@
         @media (max-width: 420px){
           margin-left: 0px;
           display: block;
-          // background-color: red;
           text-align: center;  
         }
-        
-        // @media (max-width: 1100px){
-        //   min-width: 310px;
-        // }
-        // @media (max-width: 1050px){
-        //   min-width: 300px;
-        // }
-        // 1024 min-width: 300px;
       }
 
-      // &__link{
-      //   display: none;
-      //   margin-top: 26px;
-      //   margin-left: -4px;
-      //   text-decoration: none;
-      //   color: $green;
-      //   font-family: $font-jost;
-      //   font-size: 1.6rem;
-      //   font-weight: 500;
-      //   opacity: 0.8;
-      //   padding-left: 52px;
-      //   position: relative;
-      //   letter-spacing: .13rem;
-      //   text-transform: uppercase;
-      //   &:hover{
-      //     opacity: 1;
-      //     &::before{
-      //       opacity: 1;
-      //     }
-      //   }
-      //   &::before{
-      //     content: '';
-      //     position: absolute;
-      //     left: 0; top: -6px;
-      //     width: 31px;
-      //     height: 31px;
-      //     background-image: url(../images/plus.svg);
-      //     background-size: cover;
-      //     background-repeat: no-repeat;
-      //     opacity: .8;
-      //   }
-      // }
-      // //???
-      // &:hover{
-      //   .swiper-slide__title{
-      //     position: static;
-      //   }
-      //   .swiper-slide__text{
-      //     display: block;
-      //   }     
-      //   .swiper-slide__link{
-      //     display: inline-block;
-      //   }
-      // }
       &::after{
         content: '';
         position: absolute;
@@ -203,11 +155,16 @@
         background-size: contain;
         border-radius: 20px;
         z-index: -1;
+
+        @media (max-width: 420px){
+          @include vVal(width, 420px, 320px, 384px, 211px);
+          @include vVal(left, 420px, 320px, 0px, 40px);
+        }
+        @media (max-width: 320px){
+          width: 211px;
+          left: calc((100% - 211px)/2);
+        }
       }
-      // &:hover::after{
-      //   opacity: 0.5;
-      //   border: 3px solid rgba($green, 0.3) ;
-      // }
     }
   }
 

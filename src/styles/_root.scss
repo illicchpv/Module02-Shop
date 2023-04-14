@@ -44,6 +44,8 @@ $white: white;
     padding-top: $v;
   }  @else if $prop == "min-width" {
     min-width: $v;
+  }  @else if $prop == "min-height" {
+    min-height: $v;
   }  @else if $prop == "gap" {
     gap: $v;
   }  
