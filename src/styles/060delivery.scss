@@ -99,23 +99,56 @@
   }
 
   // -------------- media --------------
-  @media (max-width: 1200px){
+  @media (max-width: 1024px){
     // &__box{
     //   margin-left: 0; // отступ подзаголовка
     // }
+    .delivery__box {
+      gap:4%;
+    }
+    .delivery__space1 {
+      height: 18px;
+    }
+    .delivery__space2 {
+      height: 15px;
+    }
+    .delivery__description {
+      // margin-top: 34px;
+    }     
+    .delivery__text{
+      flex-basis: 48%;
+    }
+    .delivery__right {
+      flex-basis: 48%;
+      margin-right: 0px;
+    }
+    .delivery__list {
+      margin: 0 auto;
+    }
   }
   @media (max-width: 768px){
+    padding-top: 76px;
+
     &__description{
       text-align: center;
     }
     .delivery__box {
-      margin-top: 71px;
+      margin-top: 38px;
       display: flex;
       flex-direction: column;
     }
     .delivery__list {
       margin: 0 auto;
       margin-top: 20px;
-  }    
+      gap: 16px;
+    }    
+  }
+  @media (max-width: 320px){
+    padding-top: 61px;
+
+    &__description{
+      font-size: 12px;
+    }
+
   }
 }

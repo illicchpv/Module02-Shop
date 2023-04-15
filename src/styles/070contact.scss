@@ -3,6 +3,13 @@
   padding-top: 207px;
   padding-bottom: 160px;
 
+  @media (max-width: 768px){
+    @include vVal(padding-top, 768px, 320px, 100px, 59px);
+  }
+  @media (max-width: 320px){
+    padding-top: 59px;
+  }
+
   &-box{
     display: flex;
     align-items: center;
@@ -44,6 +51,15 @@
         width: 29px;
         height: 30px;
         display: block;
+
+        @media (max-width: 768px){
+          @include vVal(width, 768px, 320px, 29px, 18px);
+          @include vVal(height, 768px, 320px, 30px, 16px);
+        }
+        @media (max-width: 320px){
+          width: 18px;
+          height: 16px;
+        }
       }
 
       // position: relative;
@@ -102,14 +118,19 @@
         text-align: center;
       }      
       &__list {
+        margin-top: 24px;
         flex-direction: row;
         justify-content: space-between;
       }
       &__link{
+        padding-left: 0;
         font-size: 12px;
+        white-space: nowrap;
+
+        @include vVal(gap, 768px, 320px, 18px, 9px);
       }
-      .contact-box__form {
-        margin-top: 20px;
+      &__form {
+        margin-top: 65px;
       }      
     }
 
@@ -117,6 +138,15 @@
       text-align: center;
     }
   }
+  @media (max-width: 320px){
+    &-box{
+
+      &__link {
+        gap: 9px;
+      }
+    }
+  }
+
 
 }
 
