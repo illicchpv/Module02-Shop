@@ -9,9 +9,36 @@ $orange: #d26a22; //RGBA(210, 106, 34, 1);
 $darkorange: #cf5c0d;
 $white: white;
 
+$glob: 0;
+$glob1: 0;
+$glob2: 0;
+$glob3: 0;
+$glob4: 0;
+
+@mixin vCalc1($size1, $size2,  $val1, $val2){
+  $k: calc(($val1 - $val2) / ($size1 - $size2));
+  $v: calc($val1 - (($size1 - 100vw) * $k)); // 
+  $glob1: $v !global;
+}
+@mixin vCalc2($size1, $size2,  $val1, $val2){
+  $k: calc(($val1 - $val2) / ($size1 - $size2));
+  $v: calc($val1 - (($size1 - 100vw) * $k)); // 
+  $glob2: $v !global;
+}
+@mixin vCalc3($size1, $size2,  $val1, $val2){
+  $k: calc(($val1 - $val2) / ($size1 - $size2));
+  $v: calc($val1 - (($size1 - 100vw) * $k)); // 
+  $glob3: $v !global;
+}
+@mixin vCalc4($size1, $size2,  $val1, $val2){
+  $k: calc(($val1 - $val2) / ($size1 - $size2));
+  $v: calc($val1 - (($size1 - 100vw) * $k)); // 
+  $glob4: $v !global;
+}
 @mixin vVal($prop, $size1, $size2, $val1, $val2){ // мой первый миксин )
   $k: calc(($val1 - $val2) / ($size1 - $size2));
   $v: calc($val1 - (($size1 - 100vw) * $k)); // 
+  $glob: $v !global;
   @if $prop == "left" {
     left: $v;
   } @else if $prop == "right" {
@@ -241,7 +268,7 @@ body{
     }
     &_s{
       @include vVal(font-size, 1440px, 900px, 14px, 10px);
-      @include v2Val(padding, 1440px, 900px, 22px, 35px, 15px, 33px);
+      @include v2Val(padding, 1440px, 900px, 22px, 35px, 15px, 25px);
     }
     &_frm{
       @include vVal(font-size, 1440px, 900px, 16px, 12px);
@@ -253,6 +280,10 @@ body{
       font-size: 14px;
       padding: 16px 30px;
       margin-right: -12px;
+    }
+    &_s{
+      font-size: 10px;
+      padding: 15px 25px;
     }
   }
   @media (max-width: 420px){
@@ -269,7 +300,7 @@ body{
     }
     &_s{
       font-size: 10px;
-      padding: 15px 33px;
+      padding: 15px 25px;
     }
     &_frm{
       font-size: 12px;

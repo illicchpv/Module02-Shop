@@ -9,30 +9,37 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 19px;
+    // justify-content: center;
 
     margin-bottom: 44px;
 
     @media (max-width: 1440px){
       @include vVal(margin-bottom, 1400px, 320px, 44px, 19px);
     }
+    @media (max-width: 1100px){
+      justify-content: center;
+    }
     @media (max-width: 320px){
       margin-bottom: 19px;
     }
 
     &__link{
-      display: inline-block;
+      display: block;
       text-decoration: none;
       color: $green;
       opacity: 0.50;
       font-size: 18px;
       font-weight: 400;
+      text-align: center;
 
       width: 231px;
       text-align: center;
       border: 1px solid $green;
       border-radius: calc(27px + 9px);
       box-sizing: border-box;
-      padding: 27px;
+      // padding: 27px;
+      padding-top: 27px;
+      padding-bottom: 27px;
 
       &_selected{
         color: $orange;
@@ -48,12 +55,14 @@
       @media (max-width: 1440px){
         @include vVal(font-size, 1440px, 320px, 18px, 10px);
         @include vVal(width, 1440px, 320px, 231px, 120px);
-        @include vVal(padding, 1440px, 320px, 27px, 12px);
+        @include vVal(padding-top, 1440px, 320px, 27px, 12px);
+        @include vVal(padding-bottom, 1440px, 320px, 27px, 12px);
       }
       @media (max-width: 320px){
         font-size:10px;
         width:120px;
-        padding:12px;
+        padding-top:12px;
+        padding-bottom:12px;
       }
   
     }
@@ -63,14 +72,19 @@
     display: none;
     grid-template-columns: repeat(4, 1fr);
     gap: 19px;
-    &_active{
-      display: grid;  
-    }
+
     @media (max-width: 1370px){
       grid-template-columns: repeat(3, 1fr);
     }
+    @media (max-width: 640px){
+      gap: 9px;
+    }
     @media (max-width: 970px){
       grid-template-columns: repeat(2, 1fr);
+    }
+
+    &_active{
+      display: grid;  
     }
   }
 
@@ -83,16 +97,35 @@
 
     display: grid;
     grid-template-rows: 1fr 50px 60px 58px 95px;
+
+    @media (max-width: 640px){
+      @include vVal(height, 640px, 320px, 516px, 240px);
+      @include vCalc1(640px, 320px, 280px, 90px);
+      @include vCalc2(640px, 320px, 37px, 19px);
+      @include vCalc3(640px, 320px, 63px, 60px);
+      @include vCalc4(640px, 320px, 95px, 77px);
+      grid-template-rows: $glob1 $glob2 $glob3 auto $glob4; 
+      // grid-template-rows: 280px 37px 63px auto 95px; 
+      // grid-template-rows: 90px  19px 60px auto 77px;
+    }
+    @media (max-width: 320px){
+      grid-template-rows: 90px 19px 60px auto 77px;
+      height: 240px;
+    }
+
     &:hover{
       box-shadow: 0 0 0 2px rgba($green, 0.4) inset; 
     }
     &_cmn{
-      height: 100%;
+      // height: 100%;
       box-sizing: border-box;
       margin: 0;
     }
   }
   &__img{
+    // display: none;
+    // background-color: beige;
+
     img{
       display: block;
       margin: 0 auto;
@@ -100,6 +133,16 @@
       overflow: hidden;
       box-sizing: border-box;
       padding: 20px;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      // display: none;
+      // background-color: aquamarine;
+
+      @media (max-width: 640px){
+        padding: 5px;
+        max-height: 100%;
+      }
     }
   }
   &__title{
@@ -107,6 +150,18 @@
     font-family: $font-corm;
     font-weight: 700;
     font-size: 3rem;
+    // display: none;
+
+    @media (max-width: 768px){
+      @include vVal(font-size, 768px, 320px, 30px, 14px);
+    }
+    @media (max-width: 640px){
+      margin-left: 0;
+      text-align: center;
+    }
+    @media (max-width: 320px){
+      font-size: 14px;
+    }
   }
   &__description{
     margin-left: 29px;
@@ -116,6 +171,16 @@
     opacity: 0.7;
     line-height: 1.5;
     width: calc(100% - 60px);
+
+    @media (max-width: 768px){
+      @include vVal(font-size, 768px, 320px, 16px, 10px);
+    }
+    @media (max-width: 640px){
+      text-align: center;
+    }
+    @media (max-width: 320px){
+      font-size: 10px;
+    }
   }
   &__price{
     margin-left: 29px;
@@ -123,6 +188,17 @@
     font-size: 24px;
     font-weight: 400;
     color: $green;        
+
+    @media (max-width: 768px){
+      @include vVal(font-size, 768px, 320px, 24px, 12px);
+    }
+    @media (max-width: 640px){
+      margin-left: 0px;
+      text-align: center;
+    }
+    @media (max-width: 320px){
+      font-size: 12px;
+    }
   }
   &__footer{
     display: flex;
@@ -133,6 +209,11 @@
     box-sizing: border-box;
     padding-left: 26px;      
     padding-right: 20px;
+
+    @media (max-width: 640px){
+      padding-left: 8px;      
+      padding-right: 8px;
+    }
   }
   
   // -------------- media --------------
@@ -175,5 +256,14 @@
       left: -30px; top:-6px;
       opacity: 0.8;
     } 
+  }
+}
+
+@media (max-width: 640px){
+  .catalog .counter{
+    display: none;
+  }
+  .catalog .catalog__footer{
+    justify-content: center;
   }
 }
