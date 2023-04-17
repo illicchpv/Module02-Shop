@@ -73,6 +73,8 @@ $glob4: 0;
     min-width: $v;
   }  @else if $prop == "min-height" {
     min-height: $v;
+  }  @else if $prop == "flex-basis" {
+    flex-basis: $v;
   }  @else if $prop == "gap" {
     gap: $v;
   }  
@@ -208,21 +210,35 @@ body{
 }
 
 .logo {
-  display: block;
+  display: inline-block;
   flex-basis: 12rem;
-  height: 3.2rem;
   background-image: url(../images/logo.svg);
   background-repeat: no-repeat;
   background-size: contain;
+  height: 3.2rem;
+  width: 17.9rem;
+  // height: 4.8rem;
 
   &_h{
+    @media (max-width: 320px){
+      flex-basis: 9.6rem;
+      height: 2.5rem;
+    }  
+  }
+  &_f{
     width: 17.9rem;
     height: 4.8rem;
+
+    @media (max-width: 1024px){
+      background-position: center;
+      @include vVal(width, 1024px, 320px, 179px, 120px);
+      @include vVal(height, 1024px, 320px, 48px, 32px);
+    }
+    @media (max-width: 320px){
+      width: 120px;
+      height: 32px;
+    }  
   }
-  @media (max-width: 320px){
-    flex-basis: 9.6rem;
-    height: 2.5rem;
-  }  
 }
 
 .link{

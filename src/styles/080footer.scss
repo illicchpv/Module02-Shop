@@ -12,6 +12,9 @@
       padding-bottom: 2.3rem;
       gap: 5px;
   }
+  &__logo{
+    width: auto;
+  }
   &__info {
       margin-top: -8px;
       display: flex;
@@ -26,6 +29,10 @@
       padding-left: 0;
       list-style-type: none;
       font-size: 1.8rem;
+
+      @media (max-width: 1024px){
+        font-size: 1.2rem;
+      }
   }
   &__list-nav {
       
@@ -61,7 +68,7 @@
   }
   // .footer__tel
   &__tel {
-      font-size: 2.7rem;
+      font-size: 3rem;
       text-decoration: none;
       margin-bottom: 3rem;
       color: $green;
@@ -103,11 +110,29 @@
   }
    
   // -------------- media --------------
+  @media (max-width: 1440px){
+    &__info{
+      @include vVal(flex-basis, 1440px, 1024px, 938px, 770px);
+    }
+  }
+  @media (max-width: 1024px){
+    &__box{
+      flex-wrap: wrap;
+    }
+    &__logo{
+      width: 100%;
+      text-align: center;
+      margin-bottom: 30px;      
+    }
+    &__info{
+      flex-basis: 100%; 
+    }
+  }
   @media (max-width: 768px){
     &__box{
       flex-direction: column;
       align-items: center;
-      padding: 0 40px;
+      padding: 0 10px;
     }
     &__logo{
       flex-basis: auto;
@@ -116,9 +141,17 @@
       margin-top: 20px;
       flex-direction: column;
       align-items: center;
-      width: 100%;
+      // width: 100%;
+      max-width: 300px;
 
       // background-color: aqua;
+    }
+    &__tel{
+      margin-bottom: 13px;      
+    }
+    &__mail{
+      font-size: 12px;
+      text-align: center;
     }
     &__item{
       text-align: center;
@@ -133,6 +166,11 @@
     &__text{
       flex-direction: column;
       align-items: center;
+      font-size: 10px;
+    }
+    &__author{
+      align-items: center;
+      font-size: 10px;
     }
 
   }

@@ -3,11 +3,15 @@
   padding-top: 207px;
   padding-bottom: 160px;
 
+  @media (max-width: 1440px){
+    @include vVal(padding-bottom, 1440px, 320px, 160px, 60px);
+  }
   @media (max-width: 768px){
     @include vVal(padding-top, 768px, 320px, 100px, 59px);
   }
   @media (max-width: 320px){
     padding-top: 59px;
+    padding-bottom: 60px;
   }
 
   &-box{
@@ -132,6 +136,7 @@
       }
       &__form {
         margin-top: 65px;
+        flex-basis: auto;
       }      
     }
 
