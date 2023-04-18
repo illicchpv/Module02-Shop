@@ -3,13 +3,20 @@
   color: $green;
   padding-top: 50px;
 
+  &__space1{
+    height: 86px;
+
+    @media (max-width: 1440px){
+      @include vVal(height, 1440px, 320px, 86px, 32px);
+    }
+  }
   &__hide{
     // background-color: red;
     overflow: hidden;   
     width: calc(100% + 15px);
     height: 166px;
     height: 79px;
-    margin-bottom: 48px;
+    margin-bottom: 43px;
 
     @media (max-width: 1440px){
       // @include vVal(height, 1440px, 768px, 166px, 141px);
@@ -285,6 +292,12 @@
     margin-top: 62px;
     margin-bottom: 20px;
     margin-left: 40px;
+
+    @media (max-width: 1440px){
+      @include vVal(margin-top, 1400px, 320px, 62px, 41px);
+      @include vVal(font-size, 1400px, 320px, 16px, 10px);
+    }
+
     &:hover{
       opacity: 1;
       &::before{

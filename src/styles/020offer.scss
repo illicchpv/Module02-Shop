@@ -2,8 +2,9 @@
 ///////////////////////////////////////////////////
 // this 02offer.scss imported in _root.scss
 .offer{
-  padding-top: 2rem;
-  padding-bottom: 16.8rem;
+  padding-top: 3.1rem;
+  // padding-bottom: 16.8rem;
+  padding-bottom: 162px;
 
   &__text{
     margin-top: 5.3rem;
@@ -25,9 +26,10 @@
     @media (max-width: 768px){
       max-width: 450px;
       margin: 0 auto;
+      padding-top: 17px;
     }
     @media (max-width: 320px){
-      padding-top: 41px;
+      // padding-top: 41px;
     }
   }
   
@@ -37,7 +39,9 @@
 
   // -------------- media --------------
   @media (max-width: 768px){
-    padding-bottom: 9.8rem;
+    // padding-bottom: 9.8rem;
+    padding-bottom: 53px;
+
     
     &__text-block{
       text-align: center;
@@ -49,9 +53,10 @@
 .slideBox{
   // background-color: aquamarine;
   margin: 2px;
-  height: 530px;
+  height: 516px;
   box-sizing: border-box;
   padding: 38px;
+  padding-bottom: 30px;
   border: 1px solid rgba($green, 0.3);
   border-radius: 20px;
   box-shadow: 0 0 0 2px rgba($green, 0.0) inset;
@@ -154,6 +159,8 @@
     font-size: 16px;
     font-weight: 400;
     opacity: 0.7; 
+    line-height: 1.6;
+
     @media (max-width: 1024px){
       display: block;
       opacity: 0.9;
@@ -163,6 +170,7 @@
     }
   }
   &__moreBox{
+    margin-top: 10px;
     @media (max-width: 440px){
       text-align: center;
     }

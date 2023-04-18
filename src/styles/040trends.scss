@@ -1,10 +1,11 @@
 // this 04trends.scss imported in _root.scss
 .trends{
-  padding-top: 19rem;
+  padding-top: 185px;
   padding-bottom: 12.8rem;
 
   @media (max-width: 1440px){
-    @include vVal(padding-top, 1400px, 320px, 190px, 90px);
+    @include vVal(padding-top, 1400px, 320px, 190px, 50px);
+    @include vVal(padding-bottom, 1400px, 320px, 128px, 5px);
   }
 
   &__text{
@@ -15,7 +16,8 @@
   // swiper in offer
   &__slider{
     overflow: hidden;
-    padding-top: 95px;
+    // padding-top: 95px;
+    padding-top: 47px;
     // background-color: green;
 
     @media (max-width: 1440px){
@@ -24,9 +26,10 @@
     @media (max-width: 768px){
       max-width: 384px;
       margin: 0 auto;
+      padding-top: 45px;
     }
     @media (max-width: 320px){
-      padding-top: 45px;
+      padding-top: 30px;
     }
   }
 
@@ -91,7 +94,8 @@
         font-weight: 400;
         opacity: 0.70;
         width: 100%;
-        margin-top: 19px;
+        // margin-top: 19px;
+        margin-top: -4px;
         line-height: 1.5;
         height: 70px;
         overflow: hidden;

@@ -5,7 +5,7 @@
   z-index: 0;
 
   @media (max-width: 768px){
-    padding-bottom: 61px;
+    padding-bottom: 26px;
   }
 
   &__food{
@@ -15,7 +15,7 @@
   &__cucumber {
     position: absolute;
     top: 0;
-    left: 37%;
+    left: 36%;
     width: 85px;    
     z-index: -1;
   }
@@ -90,7 +90,7 @@
       left: -32px;
     }
     &__pepper{
-      top: 415px;
+      top: 350px;
       z-index: 2;
     }
     &__avocado2{

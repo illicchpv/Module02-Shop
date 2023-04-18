@@ -7,10 +7,10 @@
     @include vVal(padding-bottom, 1440px, 320px, 160px, 60px);
   }
   @media (max-width: 768px){
-    @include vVal(padding-top, 768px, 320px, 100px, 59px);
+    @include vVal(padding-top, 768px, 320px, 100px, 69px);
   }
   @media (max-width: 320px){
-    padding-top: 59px;
+    padding-top: 69px;
     padding-bottom: 60px;
   }
 
@@ -19,10 +19,14 @@
     align-items: center;
     justify-content: space-between ;
     gap: 10px;
+    &__item{
+      margin-top: -23px;
+    }
     &__text{
       max-width: 400px;
       flex-grow: 1;
-      margin-top: 4rem;
+      // margin-top: 4rem;
+      margin-top: 55px;
       //margin-left: 12rem; // отступ подзаголовка
     }
     &__list{
@@ -121,6 +125,7 @@
       &__text{
         max-width: none;
         text-align: center;
+        margin-top: 36px;
       }      
       &__list {
         margin-top: 24px;
@@ -135,7 +140,8 @@
         @include vVal(gap, 768px, 320px, 18px, 9px);
       }
       &__form {
-        margin-top: 65px;
+        // margin-top: 65px;
+        margin-top: 40px;
         flex-basis: auto;
       }      
     }

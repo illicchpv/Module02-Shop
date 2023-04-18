@@ -1,6 +1,7 @@
 // this 03about.scss imported in _root.scss
 .about{
   color: $green;
+  padding-left: 11px;
   
   &-title_lineH{
     line-height: 1.2;
@@ -10,6 +11,7 @@
     display: flex;
     justify-content: space-between;
     align-items:flex-end;
+    margin-left: -9px;
   }
   &__text{
     // margin-left: 112px; // отступ подзаголовка
@@ -49,7 +51,7 @@
         display: block;
         position: absolute;
         width: 88px; height: 88px;
-        top: -100px;
+        top: -109px;
         left: calc(50% - 44px);
         background-repeat: no-repeat;
         background-position: center;
@@ -115,7 +117,8 @@
       text-align: center;
     }
     &__list {
-      margin-top: 120px;
+      // margin-top: 120px;
+      margin-top: 91px;
       width: calc(100% - 30px);
       justify-content: space-between;
     }     

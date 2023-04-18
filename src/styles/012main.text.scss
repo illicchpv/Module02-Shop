@@ -16,14 +16,26 @@
     // margin-left: 12rem; // отступ подзаголовка
     max-width: 378px;
     margin-top: 6rem;
+
+    @media (max-width: 768px){
+      margin-top: 23px;
+    }
   }
   &__link{
     margin-top: 4.5rem;
+
+    @media (max-width: 768px){
+      margin-top: 42px;
+    }
   }
 
   // =======Plate================
   &__imagemob{
     display: none;
+
+    @media (max-width: 768px){
+      margin-top: 42px;
+    }
   }
   &__cover{
     flex-basis: 758px;
@@ -198,14 +210,21 @@
     }
     &__imagemob{
       display: block;
-      max-width: 300px;
+      width: 230px;
+      // width: 300px;
+      // @include vVal(width, 768px, 320px, 300px, 230px);
       margin: 0 auto;
       margin-top: 3rem;
       animation: shadowGo 5s infinite ease-in-out;
       border-radius: 50%;
     }
-      &__cover{
+    &__cover{
       display: none;
+    }
+  }
+  @media (max-width: 320px){
+    &__imagemob{
+      width: 230px;
     }
   }
 

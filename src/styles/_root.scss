@@ -330,6 +330,8 @@ body{
   font-weight: 700;
   font-size: 7.8rem;
   margin: 0;
+  letter-spacing: 1px;
+  
   &__span{
     font-style: italic;
   }
@@ -419,6 +421,8 @@ body{
 
     @media (max-width: 768px){
       @include vVal(font-size, 768px, 320px, 12px, 10px);
+      @include vVal(margin-bottom, 768px, 320px, 10px, 0px);
+      @include vVal(margin-top, 768px, 320px, 0px, -8px);
     }
     @media (max-width: 320px){
       font-size: 10px;
@@ -466,6 +470,7 @@ body{
       padding-left: 0;
       @include vVal(font-size, 768px, 320px, 16px, 12px);
       @include vVal(width, 768px, 320px, 260px, 180px);
+      @include vVal(margin-top, 768px, 320px, 12px, -12px);
       padding-top: 17px;
       padding-bottom: 17px;
     }
