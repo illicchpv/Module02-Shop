@@ -70,6 +70,7 @@
     position: absolute;
     color: $green;
     text-align: left;
+    cursor: pointer;
 
     // background-color: transparent;
     // transition:all 1.3s;
@@ -167,18 +168,20 @@
   }
   @media (max-width: 1024px){
     &__btn{
-      &_1{
-        @include vVal(top, 1024px, 900px, 72px, 75px);
-        @include vVal(left, 1024px, 900px, 105px, 60px);
-      }
-      &_2{
-        top:40px;
-        @include vVal(right, 1024px, 900px, 107px, 75px);
-      }
-      &_3{
-        @include vVal(bottom, 1024px, 900px, 22px, 38px);
-        @include vVal(right, 1024px, 900px, 275px, 204px);
-      }
+      display: none;
+
+      // &_1{
+      //   @include vVal(top, 1024px, 900px, 72px, 75px);
+      //   @include vVal(left, 1024px, 900px, 105px, 60px);
+      // }
+      // &_2{
+      //   top:40px;
+      //   @include vVal(right, 1024px, 900px, 107px, 75px);
+      // }
+      // &_3{
+      //   @include vVal(bottom, 1024px, 900px, 22px, 38px);
+      //   @include vVal(right, 1024px, 900px, 275px, 204px);
+      // }
     }
     &__flex{
       align-items: start;
@@ -195,11 +198,11 @@
       border: none;
     }
   }
-  @media (max-width: 900px){
-    &__btn{
-      display: none;
-    }
-  }
+  // @media (max-width: 900px){
+  //   &__btn{
+  //     display: none;
+  //   }
+  // }
   @media (max-width: 768px){
     &__text{
       flex-basis: 100%;

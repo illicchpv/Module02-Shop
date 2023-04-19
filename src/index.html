@@ -70,6 +70,23 @@
      <!-- main -->
     <div class="main" style="display:-none;">
 
+        <div class="container">
+            <div class="popup-container">
+                <div class="popup" id="notification">
+                    <div class="popup__cover">
+                        <img class="popup__img" src="images/catalog/milk-new.png" alt="milk">
+                    </div>
+                    <p class="popup__text">
+                        Вы добавили в корзину 
+                        <a class="popup__product" href="#">Молоко топленое</a>
+                    </p>
+                    <button class="close" type="button"
+                        onclick="this.parentElement.style.visibility = 'hidden'"
+                    ></button>
+                </div>
+            </div>
+        </div>
+
         <!-- header -->
         <header class="header" style="display:-none;">
             <a class="logo logo_h" href="#"></a>
@@ -125,14 +142,44 @@
                     <div class="main__line">
                         <img class="main__image" src="images/x_plate.jpg" alt="plate">
                     </div>
-                    <div class="main__btn main__btn_1 flu" type="button">
+                    <div class="main__btn main__btn_1 flu" type="button"
+                        onclick="document.getElementById('ppabout_1').classList.toggle('ppabout-view')"
+                    >
                         <span class="main__food">Авокадо</span> 134руб
                     </div>
-                    <div class="main__btn main__btn_2 flu" type="button">
+                    <div class="main__btn main__btn_2 flu" type="button"
+                        onclick="document.getElementById('ppabout_2').classList.toggle('ppabout-view')"
+                    >
                         <span class="main__food">Картофель</span> 169 руб
                     </div>
-                    <div class="main__btn main__btn_3 flu" type="button">
+                    <div class="main__btn main__btn_3 flu" type="button"
+                        onclick="document.getElementById('ppabout_3').classList.toggle('ppabout-view')"
+                    >
                         <span class="main__food">Томаты</span> 215 руб
+                    </div>
+                    <div class="ppabout ppabout_1"  id="ppabout_1">
+                        <h3 class="ppabout__title">Авокадо</h3>
+                        <p class="ppabout__description">Авокадо Молодой, Свежий урожай, 1кг</p>
+                        <p class="ppabout__price">134 руб/кг</p>
+                        <button class="close" type="button"
+                            onclick="this.parentElement.style.visibility = 'hidden'"
+                        ></button>
+                    </div>
+                    <div class="ppabout ppabout_2"  id="ppabout_2">
+                        <h3 class="ppabout__title">Картофель</h3>
+                        <p class="ppabout__description">Картофель Молодой, Свежий урожай, 1кг</p>
+                        <p class="ppabout__price">169 руб/кг</p>
+                        <button class="close" type="button"
+                            onclick="this.parentElement.style.visibility = 'hidden'"
+                        ></button>
+                    </div>
+                    <div class="ppabout ppabout_3"  id="ppabout_3">
+                        <h3 class="ppabout__title">Томаты</h3>
+                        <p class="ppabout__description">Томаты, Свежий Молодой урожай, 1кг</p>
+                        <p class="ppabout__price">215 руб/кг</p>
+                        <button class="close" type="button"
+                            onclick="this.parentElement.style.visibility = 'hidden'"
+                        ></button>
                     </div>
                 </div>
             </div>
@@ -634,7 +681,7 @@
             </div>
             <!-- more -->
             <div class="more">
-                <a class="more__link" href="#"><span class="more__text">Загрузить еще</span></a>
+                <button class="more__link" href="#" type="button"><span class="more__text">Загрузить еще</span></button>
             </div>
         </div>
     </main>

@@ -1,0 +1,177 @@
+// _popups
+.popup-container{
+  position: relative;
+}
+
+.close{
+  //background-image: url(../images/close.svg);
+  background-image: url(../images/close.svg);
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: 9px;
+  right: 14px;
+  cursor: pointer;
+}
+
+.popup{
+  position: absolute;
+  box-sizing: border-box;
+  width: 280px;
+  padding: 15px 30px;
+  // top: 54px;
+  // right: -51px;
+  //top: 88px;
+  top: 107px;
+  // right: 114px;  
+  right: -50px;
+
+  z-index: 10;
+  border-radius: 20px;
+  background-color: $white;
+  // background-color: red;
+  display: flex;
+  align-items: center;
+  // gap: 15px;
+  gap: 7px;
+  box-shadow: 0 0 33px 0px rgba($green,0.30);
+
+  @media (max-width: 1700px){
+    // right: -50px;
+    @include vVal(right, 1700px, 1440px, -50px, -10px);
+  }
+  @media (max-width: 1440px){
+    right: -10px;
+  }
+
+  @media (max-width: 1024px){
+    visibility: hidden!important;
+  }
+
+  &::after{
+    content: '';
+    border: 9px solid transparent;
+    border-bottom: 17px solid $white;
+    position: absolute;
+    top: -25px;
+    right: 60px;
+
+    @media (max-width: 1700px){
+      @include vVal(right, 1700px, 1440px, 60px, 20px);
+    }
+    @media (max-width: 1440px){
+      right: 20px;
+    }
+    
+  }
+
+  &__cover{
+    position: relative;
+    width: 40px;
+    height: 60px;
+    overflow: hidden;
+
+  }
+  &__img{
+    position: absolute;
+    width: 40px;
+    height: 60px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+
+  }
+  &__text{
+    text-align: left;
+  }
+  &__product{
+    display: inline-block;
+    color: $green;
+    text-decoration: none;
+    border-bottom: 1px solid $green;
+  }
+}
+
+.ppabout{
+  position: absolute;
+  box-sizing: border-box;
+  width: 237px;
+  padding: 20px 30px;
+  padding-left: 30px;
+  z-index: 10;
+  border-radius: 20px;
+  background-color: $white;
+  // background-color: red;
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  gap: 10px;
+  box-shadow: 0 0 33px 0px rgba($green,0.30);
+  // background-color: green;
+  visibility: hidden;
+
+  @media (max-width: 1024px){
+    visibility: hidden!important;
+  }
+
+  &_1{
+    top: 138px;
+    left: -50px;  
+    // visibility: visible;
+
+    @media (max-width: 1440px){
+      @include vVal(top, 1440px, 1201px, 138px, 95px);
+    }
+    @media (max-width: 1200px){
+      @include vVal(top, 1200px, 1025px, 156px, 122px);
+    }
+  }
+  &_2{
+    top: 176px;
+    right: 7px;
+    // visibility: visible;
+
+    @media (max-width: 1440px){
+      @include vVal(top, 1440px, 1200px, 170px, 123px);
+    }
+    @media (max-width: 1200px){
+      @include vVal(top, 1200px, 1025px, 123px, 95px);
+    }
+  }
+  &_3{
+    bottom: -95px;
+    left: 200px;
+    // visibility: visible;
+
+    @media (max-width: 1440px){
+      @include vVal(left, 1440px, 1200px, 200px,  77px);
+    }
+  }
+
+  &__title{
+    font-size: 24px;
+    font-family: $font-corm;
+    margin-top: 15px;
+    margin-bottom: 0;
+  }
+  &__description{
+    font-size: 14px;
+    color: rgba($green, 0.7);
+    margin-top: 2px;
+    margin-bottom: 0;
+  }
+  &__price{
+    font-size: 16px;
+    margin-top: 8px;
+    margin-bottom: 11px;
+  }
+
+}
+
+.ppabout-view{
+  visibility: visible;
+}
+

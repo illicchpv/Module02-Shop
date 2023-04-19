@@ -281,6 +281,8 @@
   &__link{
     display: inline-block;
     position: relative;
+    border: none;
+    background-color: transparent;
 
     opacity: 0.8;
     text-decoration: none;
