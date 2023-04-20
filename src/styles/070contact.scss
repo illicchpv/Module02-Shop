@@ -162,17 +162,17 @@
 
 }
 
-// @keyframes dzin {
-//   0% { 
-//     transform: rotate(0deg);
-//     transform: translateX(0);
-//   }
-//   50% { 
-//     transform: rotate(10deg);
-//     transform: translateX(10px);
-//   }
-//   0% { 
-//     transform: rotate(0deg);
-//     transform: translateX(0);
-//   }
-// }
+@keyframes dzin {
+  0% { 
+    transform: rotate(0deg);
+    transform: translateX(0);
+  }
+  50% { 
+    transform: rotate(10deg);
+    transform: translateX(10px);
+  }
+  0% { 
+    transform: rotate(0deg);
+    transform: translateX(0);
+  }
+}

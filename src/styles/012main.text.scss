@@ -233,15 +233,15 @@
 
 }
 
-// @keyframes shadowGo {
-//   0%{
-//     box-shadow: 0 0 0 0px rgba($green,0.50);
-//   }
-//   50%{
-//     transform:rotate(10deg); 
-//     box-shadow: 10px 15px 30px 0px rgba($green,0.50);
-//   }
-//   100%{
-//     box-shadow: 0 0 0 0px rgba($green,0.50);
-//   }
-// }
+@keyframes shadowGo {
+  0%{
+    box-shadow: 0 0 0 0px rgba($green,0.50);
+  }
+  50%{
+    transform:rotate(10deg); 
+    box-shadow: 10px 15px 30px 0px rgba($green,0.50);
+  }
+  100%{
+    box-shadow: 0 0 0 0px rgba($green,0.50);
+  }
+}
