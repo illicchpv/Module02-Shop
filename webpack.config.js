@@ -26,7 +26,7 @@ module.exports = ({ develop }) => ({
             template: './src/index.html'
         }),
         new MiniCssExtractPlugin({
-            filename: './styles/_root.css'
+            filename: './styles/root.css'
         }),
         new CleanWebpackPlugin()
     ],
